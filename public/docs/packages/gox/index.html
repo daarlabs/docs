@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Gox # Composable pure function view layer You can use any HTML element as Go func Advice
+Use import alias import . &ldquo;github.com/daarlabs/arcanum/gox&rdquo; Be careful with naming convention to prevent HTML nodes names collisions Sample code # package app import ( . &#34;github.com/daarlabs/arcanum/gox&#34; ) func Page() string { return Render( Html( Lang(&#34;en&#34;), Head( Title(Text(&#34;Example app&#34;)), ), Body( H1(Text(&#34;Example page&#34;)), P(Text(&#34;Example paragraph&#34;)), ), ), ) } Render # Render function transform Gox nodes to string">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://arcanum.daar.cz/docs/packages/gox/">
+  <meta property="og:site_name" content="Arcanum">
+  <meta property="og:title" content="Arcanum">
+  <meta property="og:description" content="Gox # Composable pure function view layer You can use any HTML element as Go func Advice
+Use import alias import . “github.com/daarlabs/arcanum/gox” Be careful with naming convention to prevent HTML nodes names collisions Sample code # package app import ( . &#34;github.com/daarlabs/arcanum/gox&#34; ) func Page() string { return Render( Html( Lang(&#34;en&#34;), Head( Title(Text(&#34;Example app&#34;)), ), Body( H1(Text(&#34;Example page&#34;)), P(Text(&#34;Example paragraph&#34;)), ), ), ) } Render # Render function transform Gox nodes to string">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Gox | Arcanum</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="canonical" href="https://arcanum.daar.cz/docs/packages/gox/">
+<link rel="stylesheet" href="/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.9cde82e615ca2ae1df6cbbe271649ec15a23db5bc6a286302f5c191b40b4ae27.js" integrity="sha256-nN6C5hXKKuHfbLvicWSewVoj21vGooYwL1wZG0C0ric=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Arcanum</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/gox/" class="active">Gox</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Gox</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#sample-code">Sample code</a></li>
+    <li><a href="#render">Render</a></li>
+    <li><a href="#text">Text</a></li>
+    <li><a href="#elements">Elements</a></li>
+    <li><a href="#attributes">Attributes</a></li>
+    <li><a href="#shared">Shared</a></li>
+    <li><a href="#fragment">Fragment</a></li>
+    <li><a href="#write">Write</a></li>
+    <li><a href="#append">Append</a></li>
+    <li><a href="#raw">Raw</a></li>
+    <li><a href="#factory">Factory</a></li>
+    <li><a href="#plugin">Plugin</a></li>
+    <li><a href="#clsx">Clsx</a></li>
+    <li><a href="#component">Component</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="gox">
+  Gox
+  <a class="anchor" href="#gox">#</a>
+</h1>
+<ul>
+<li>Composable pure function view layer</li>
+<li>You can use any HTML element as Go func</li>
+</ul>
+<blockquote class="book-hint info">
+  <p><strong>Advice</strong></p>
+<ul>
+<li>Use import alias <strong>import . &ldquo;github.com/daarlabs/arcanum/gox&rdquo;</strong></li>
+<li>Be careful with naming convention to prevent HTML nodes names collisions</li>
+</ul>
+</blockquote>
+
+<h2 id="sample-code">
+  Sample code
+  <a class="anchor" href="#sample-code">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">app</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	. <span style="color:#e6db74">&#34;github.com/daarlabs/arcanum/gox&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Page</span>() <span style="color:#66d9ef">string</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Render</span>(
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Html</span>(
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">Lang</span>(<span style="color:#e6db74">&#34;en&#34;</span>),
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">Head</span>(
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">Title</span>(<span style="color:#a6e22e">Text</span>(<span style="color:#e6db74">&#34;Example app&#34;</span>)),
+</span></span><span style="display:flex;"><span>			),
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">Body</span>(
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">H1</span>(<span style="color:#a6e22e">Text</span>(<span style="color:#e6db74">&#34;Example page&#34;</span>)),
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">P</span>(<span style="color:#a6e22e">Text</span>(<span style="color:#e6db74">&#34;Example paragraph&#34;</span>)),
+</span></span><span style="display:flex;"><span>			),
+</span></span><span style="display:flex;"><span>		),
+</span></span><span style="display:flex;"><span>	)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="render">
+  Render
+  <a class="anchor" href="#render">#</a>
+</h2>
+<p>Render function transform Gox nodes to string</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Render</span>(
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Div</span>(<span style="color:#a6e22e">Text</span>(<span style="color:#e6db74">&#34;Gox&#34;</span>))
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h2 id="text">
+  Text
+  <a class="anchor" href="#text">#</a>
+</h2>
+<p>For the composition feature, we need to use text node, instead of primitive string</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">H1</span>(<span style="color:#a6e22e">Text</span>(<span style="color:#e6db74">&#34;Headline 1&#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">P</span>(<span style="color:#a6e22e">Text</span>(<span style="color:#e6db74">&#34;Paragraph&#34;</span>))
+</span></span></code></pre></div><h2 id="elements">
+  Elements
+  <a class="anchor" href="#elements">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Div</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">H1</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">P</span>()
+</span></span></code></pre></div><h2 id="attributes">
+  Attributes
+  <a class="anchor" href="#attributes">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Button</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Type</span>(<span style="color:#e6db74">&#34;submit&#34;</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">CustomData</span>(<span style="color:#e6db74">&#34;track&#34;</span>, <span style="color:#e6db74">&#34;submit-button&#34;</span>),
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">A</span>(
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Href</span>(<span style="color:#e6db74">&#34;/&#34;</span>),
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Text</span>(<span style="color:#e6db74">&#34;Go to homepage&#34;</span>),
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h2 id="shared">
+  Shared
+  <a class="anchor" href="#shared">#</a>
+</h2>
+<ul>
+<li>Some nodes have shared name (label, style, title, &hellip;)</li>
+<li>Modifiers <strong>Element()</strong>, <strong>Attribute()</strong> will change node type</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Label</span>(<span style="color:#a6e22e">Text</span>(<span style="color:#e6db74">&#34;E-mail&#34;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Style</span>(<span style="color:#a6e22e">Element</span>(), <span style="color:#a6e22e">Raw</span>(<span style="color:#e6db74">&#34;body{background:red;}&#34;</span>))
+</span></span></code></pre></div><h2 id="fragment">
+  Fragment
+  <a class="anchor" href="#fragment">#</a>
+</h2>
+<p>Wrapper, when you need group nodes to single node</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Fragment</span>(
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">Div</span>(),
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">Span</span>(),
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">H1</span>(),
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h2 id="write">
+  Write
+  <a class="anchor" href="#write">#</a>
+</h2>
+<p>If you have <strong>io.Writer</strong>, like <strong>http.ResponseWriter</strong>, you can use <strong>Write(w io.Writer, nodes &hellip;Node)</strong> function</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Write</span>(<span style="color:#a6e22e">w</span>, <span style="color:#a6e22e">Div</span>(<span style="color:#a6e22e">Text</span>(<span style="color:#e6db74">&#34;this is the response&#34;</span>)))
+</span></span></code></pre></div><h2 id="append">
+  Append
+  <a class="anchor" href="#append">#</a>
+</h2>
+<p>After node initialization, you can append nodes to the node</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Append</span>(
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">Div</span>(),
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">Text</span>(<span style="color:#e6db74">&#34;Appended node&#34;</span>),
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h2 id="raw">
+  Raw
+  <a class="anchor" href="#raw">#</a>
+</h2>
+<p>Pure HTML can be used with <strong>Raw()</strong> node</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Raw</span>(<span style="color:#e6db74">`&lt;div&gt;Raw element&lt;/div&gt;`</span>)
+</span></span></code></pre></div><h2 id="factory">
+  Factory
+  <a class="anchor" href="#factory">#</a>
+</h2>
+<p>If some element, attribute missing, or you have some custom features, you can create you own Gox nodes</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">CustomElement</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">CreateElement</span>(<span style="color:#e6db74">&#34;my-custom-element&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">CustomAttribute</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">CreateAttribute</span>[<span style="color:#66d9ef">string</span>](<span style="color:#e6db74">&#34;my-custom-attribute&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">CustomElement</span>(
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">CustomAttribute</span>(<span style="color:#e6db74">&#34;some-value&#34;</span>),
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h2 id="plugin">
+  Plugin
+  <a class="anchor" href="#plugin">#</a>
+</h2>
+<p>You can also create custom nodes, as struct, with only one required method <strong>Node() Node</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">MyPlugin</span> <span style="color:#66d9ef">struct</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">SomeValue</span> <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">p</span> <span style="color:#a6e22e">MyPlugin</span>) <span style="color:#a6e22e">Node</span>() <span style="color:#a6e22e">Node</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Div</span>(
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Text</span>(<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">SomeValue</span>)
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="clsx">
+  Clsx
+  <a class="anchor" href="#clsx">#</a>
+</h2>
+<p>Built-in plugin to conditional classes</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Div</span>(
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Clsx</span>{
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;class-1 class-2&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;class-3&#34;</span>: <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h2 id="component">
+  Component
+  <a class="anchor" href="#component">#</a>
+</h2>
+<p>Gox offers compose power to create stateless UI components</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">MainButton</span>(<span style="color:#a6e22e">content</span> <span style="color:#66d9ef">string</span>) <span style="color:#a6e22e">Node</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Button</span>(
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Type</span>(<span style="color:#e6db74">&#34;button&#34;</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">CustomData</span>(<span style="color:#e6db74">&#34;test&#34;</span>, <span style="color:#e6db74">&#34;test-id&#34;</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Text</span>(<span style="color:#a6e22e">content</span>),
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#sample-code">Sample code</a></li>
+    <li><a href="#render">Render</a></li>
+    <li><a href="#text">Text</a></li>
+    <li><a href="#elements">Elements</a></li>
+    <li><a href="#attributes">Attributes</a></li>
+    <li><a href="#shared">Shared</a></li>
+    <li><a href="#fragment">Fragment</a></li>
+    <li><a href="#write">Write</a></li>
+    <li><a href="#append">Append</a></li>
+    <li><a href="#raw">Raw</a></li>
+    <li><a href="#factory">Factory</a></li>
+    <li><a href="#plugin">Plugin</a></li>
+    <li><a href="#clsx">Clsx</a></li>
+    <li><a href="#component">Component</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
