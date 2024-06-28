@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arcanum</title>
+    <link>https://arcanum.daar.cz/docs/packages/mirage/context/</link>
+    <description>Recent content on Arcanum</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://arcanum.daar.cz/docs/packages/mirage/context/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/context/component/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/component/</guid>
+      <description> Context - Component # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/context/factory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/factory/</guid>
+      <description> Context - Factory # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/context/flash-message/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/flash-message/</guid>
+      <description> Context - Flash Message # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/context/generator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/generator/</guid>
+      <description> Context - Generator # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/context/interceptor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/interceptor/</guid>
+      <description> Interceptor # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/context/page/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/page/</guid>
+      <description> Context - Page # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/context/response/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/response/</guid>
+      <description> Response # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/context/state/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/state/</guid>
+      <description> Context - State # </description>
+    </item>
+  </channel>
+</rss>
