@@ -1,6 +1,6 @@
-# Web development toolkit written in Go
+# Pure Go web development toolkit
 
-Arcanum is focused on pure Go web development, to create highly interactive server-side apps, while you enjoy it
+Arcanum is focused on pure Go web development, to create highly interactive fullstack apps, while you enjoy it
 
 **Please, be patient, docs are in construction, thank you.**
 

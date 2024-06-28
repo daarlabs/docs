@@ -40,7 +40,7 @@
       <link>https://arcanum.daar.cz/docs/packages/mirage/config/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://arcanum.daar.cz/docs/packages/mirage/config/</guid>
-      <description>Config # App # Plugin # Plugins like Farah UI, based on Mirage, must be registered, they need set the field to true&#xA;Plugin: true Cache # Cache by default uses memory package, but recommended way is to use Redis (or Redis-compatible database) Redis client Cache: config.Cache{ // Custom memory dir, which persist cache state memory: memory.New(&amp;#34;./custom-backup-dir&amp;#34;), redis: redis.NewClient( &amp;amp;redis.Options{ Addr: &amp;#34;starter-redis:6379&amp;#34;, DB: 1, }, ) } Database # Supports multi-database system Main database is default Provided naming convention constant Database: map[string]*quirk.</description>
+      <description>Config # App # App: config.App{ Name: &amp;#34;your-app-name&amp;#34;, Plugin: true // If it&amp;#39;s plugin, not an app PublicUrlPath: &amp;#34;/public/&amp;#34;, PublicLocalDir: &amp;#34;./public/&amp;#34;, } Plugin # Plugins like Farah UI, based on Mirage, must be registered, they need set the field to true&#xA;Cache # Cache by default uses memory package, but recommended way is to use Redis (or Redis-compatible database) Redis client Cache: config.Cache{ // Custom memory dir, which persist cache state memory: memory.</description>
     </item>
     <item>
       <title></title>

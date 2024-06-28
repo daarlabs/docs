@@ -2,7 +2,7 @@
 
 Requirements:
 - [Docker](https://www.docker.com/)
-- [Go](https://go.dev/)
+- [Go](https://go.dev/) 1.22+
 
 Optional:
 - [Tilt](https://tilt.dev/)
