@@ -1,5 +1,6 @@
 # Gox
 
+- **HTML knowledge required**
 - Composable pure function view layer
 - You can use any HTML element as Go func
 
@@ -125,7 +126,7 @@ CustomElement(
 ## Plugin
 You can also create custom nodes, as struct, with only one required method **Node() Node**
 ```go
-type MyPlugin struct{
+type MyPlugin struct {
 	SomeValue string
 }
 

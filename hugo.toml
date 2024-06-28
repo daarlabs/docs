@@ -7,4 +7,7 @@ title = 'Arcanum'
 path = 'github.com/alex-shpak/hugo-book'
 
 [params]
-    BookSearch = true
+BookSearch = true
+
+[markup.goldmark.renderer]
+unsafe = true

@@ -9,10 +9,213 @@
     <atom:link href="https://arcanum.daar.cz/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
+      <link>https://arcanum.daar.cz/docs/get-started/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/get-started/</guid>
+      <description>Get started # Requirements:&#xA;Docker Go Optional:&#xA;Tilt Clone starter repository # git clone https://github.com/daarlabs/starter.git Start the app # tilt up # OR docker compose up Your app will be running on localhost&#xA;Next step # Config</description>
+    </item>
+    <item>
+      <title></title>
       <link>https://arcanum.daar.cz/docs/packages/gox/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://arcanum.daar.cz/docs/packages/gox/</guid>
-      <description>Gox # Composable pure function view layer You can use any HTML element as Go func Advice&#xA;Use import alias import . &amp;ldquo;github.com/daarlabs/arcanum/gox&amp;rdquo; Be careful with naming convention to prevent HTML nodes names collisions Sample code # package app import ( . &amp;#34;github.com/daarlabs/arcanum/gox&amp;#34; ) func Page() string { return Render( Html( Lang(&amp;#34;en&amp;#34;), Head( Title(Text(&amp;#34;Example app&amp;#34;)), ), Body( H1(Text(&amp;#34;Example page&amp;#34;)), P(Text(&amp;#34;Example paragraph&amp;#34;)), ), ), ) } Render # Render function transform Gox nodes to string</description>
+      <description>Gox # HTML knowledge required Composable pure function view layer You can use any HTML element as Go func Advice&#xA;Use import alias import . &amp;ldquo;github.com/daarlabs/arcanum/gox&amp;rdquo; Be careful with naming convention to prevent HTML nodes names collisions Sample code # package app import ( . &amp;#34;github.com/daarlabs/arcanum/gox&amp;#34; ) func Page() string { return Render( Html( Lang(&amp;#34;en&amp;#34;), Head( Title(Text(&amp;#34;Example app&amp;#34;)), ), Body( H1(Text(&amp;#34;Example page&amp;#34;)), P(Text(&amp;#34;Example paragraph&amp;#34;)), ), ), ) } Render # Render function transform Gox nodes to string</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/assets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/assets/</guid>
+      <description> Assets # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/auth/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/auth/</guid>
+      <description> Auth # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/cache/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/cache/</guid>
+      <description> Cache # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/component/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/component/</guid>
+      <description> Component # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/config/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/config/</guid>
+      <description>Config # App # Plugin # Plugins like Farah UI, based on Mirage, must be registered, they need set the field to true&#xA;Plugin: true Cache # Cache by default uses memory package, but recommended way is to use Redis (or Redis-compatible database) Redis client Cache: config.Cache{ // Custom memory dir, which persist cache state memory: memory.New(&amp;#34;./custom-backup-dir&amp;#34;), redis: redis.NewClient( &amp;amp;redis.Options{ Addr: &amp;#34;starter-redis:6379&amp;#34;, DB: 1, }, ) } Database # Supports multi-database system Main database is default Provided naming convention constant Database: map[string]*quirk.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/context/component/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/component/</guid>
+      <description> Context - Component # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/context/factory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/factory/</guid>
+      <description> Context - Factory # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/context/flash-message/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/flash-message/</guid>
+      <description> Context - Flash Message # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/context/generator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/generator/</guid>
+      <description> Context - Generator # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/context/interceptor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/interceptor/</guid>
+      <description> Interceptor # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/context/page/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/page/</guid>
+      <description> Context - Page # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/context/request/is/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/request/is/</guid>
+      <description> Request - Is # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/context/response/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/response/</guid>
+      <description> Response # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/context/state/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/state/</guid>
+      <description> Context - State # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/cookies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/cookies/</guid>
+      <description> Cookies # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/csrf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/csrf/</guid>
+      <description> CSRF # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/database/</guid>
+      <description> Database # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/filesystem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/filesystem/</guid>
+      <description> Filesystem # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/firewall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/firewall/</guid>
+      <description> Firewall # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/form/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/form/</guid>
+      <description> Form # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/handler/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/handler/</guid>
+      <description> Handler # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/layout/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/layout/</guid>
+      <description> Layout # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/localization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/localization/</guid>
+      <description> Localization # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/mailer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/mailer/</guid>
+      <description> Mailer # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/middleware/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/middleware/</guid>
+      <description> Middleware # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/plugin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/plugin/</guid>
+      <description> Plugin # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/router/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/router/</guid>
+      <description> Router # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://arcanum.daar.cz/docs/packages/mirage/view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://arcanum.daar.cz/docs/packages/mirage/view/</guid>
+      <description> View # </description>
     </item>
   </channel>
 </rss>

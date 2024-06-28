@@ -2,9 +2,81 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://arcanum.daar.cz/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/get-started/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/crest/</loc>
+  </url><url>
     <loc>https://arcanum.daar.cz/docs/packages/gox/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/</loc>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/assets/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/auth/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/cache/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/component/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/config/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/component/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/factory/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/flash-message/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/generator/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/interceptor/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/page/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/request/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/request/is/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/response/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/state/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/cookies/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/csrf/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/database/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/filesystem/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/firewall/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/form/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/handler/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/layout/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/localization/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/mailer/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/middleware/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/plugin/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/router/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mirage/view/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/mystiq/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/quirk/</loc>
+  </url><url>
+    <loc>https://arcanum.daar.cz/docs/packages/tempest/</loc>
   </url><url>
     <loc>https://arcanum.daar.cz/categories/</loc>
   </url><url>
