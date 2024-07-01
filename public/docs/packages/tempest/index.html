@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Tempest # On-request styles utility-based framework CSS, JS, Fonts manager ">
+<meta name="description" content="Tempest # On-request dynamic styles utility-based framework CSS, JS, Fonts manager API inspired by TailwindCSS Classes and their styles are cached Config # Tempest uses global config and sync.Map to store classes, so you need to configure it before app config initialization Advice
+Init Tempest Config in same file as app config func init() { tempest.GlobalConfig = &amp;tempest.Config{ // App font family FontFamily: &#34;Sora, sans-serif&#34;, // Aditional fonts Font: map[string]tempest.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://arcanum.daar.cz/docs/packages/tempest/">
   <meta property="og:site_name" content="Arcanum">
   <meta property="og:title" content="Arcanum">
-  <meta property="og:description" content=" Tempest # On-request styles utility-based framework CSS, JS, Fonts manager ">
+  <meta property="og:description" content="Tempest # On-request dynamic styles utility-based framework CSS, JS, Fonts manager API inspired by TailwindCSS Classes and their styles are cached Config # Tempest uses global config and sync.Map to store classes, so you need to configure it before app config initialization Advice
+Init Tempest Config in same file as app config func init() { tempest.GlobalConfig = &amp;tempest.Config{ // App font family FontFamily: &#34;Sora, sans-serif&#34;, // Aditional fonts Font: map[string]tempest.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 <title>Tempest | Arcanum</title>
@@ -18,7 +20,7 @@
 <link rel="canonical" href="https://arcanum.daar.cz/docs/packages/tempest/">
 <link rel="stylesheet" href="/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.87ce625aff2dddfa0b59e51666883e54eca99896ebfe730e2fa590dbaee55ac6.js" integrity="sha256-h85iWv8t3foLWeUWZog&#43;VOypmJbr/nMOL6WQ267lWsY=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.9417ef69a99682338c69d039c1bdc3d2168fa4cfd660fa5feafcf8491228363a.js" integrity="sha256-lBfvaamWgjOMadA5wb3D0haPpM/WYPpf6vz4SRIoNjo=" crossorigin="anonymous"></script>
 
   
 
@@ -643,7 +645,28 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#config">Config</a></li>
+    <li><a href="#start">Start</a></li>
+    <li><a href="#assets-providing">Assets providing</a></li>
+    <li><a href="#class">Class</a></li>
+    <li><a href="#component-action">Component Action</a></li>
+    <li><a href="#modifier">Modifier</a>
+      <ul>
+        <li><a href="#placeholder">Placeholder</a></li>
+        <li><a href="#dark">Dark</a></li>
+        <li><a href="#hover">Hover</a></li>
+        <li><a href="#focus">Focus</a></li>
+        <li><a href="#checked">Checked</a></li>
+        <li><a href="#peer">Peer</a></li>
+        <li><a href="#group">Group</a></li>
+        <li><a href="#opacity">Opacity</a></li>
+        <li><a href="#media-query">Media query</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
 
@@ -659,10 +682,175 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#tempest">#</a>
 </h1>
 <ul>
-<li>On-request styles utility-based framework</li>
+<li>On-request dynamic styles utility-based framework</li>
 <li>CSS, JS, Fonts manager</li>
+<li>API inspired by <a href="https://tailwindcss.com/" target="_blank">TailwindCSS</a></li>
+<li>Classes and their styles are cached</li>
 </ul>
-</article>
+<h2 id="config">
+  Config
+  <a class="anchor" href="#config">#</a>
+</h2>
+<ul>
+<li>Tempest uses global config and sync.Map to store classes, so you need to configure it before app config initialization</li>
+</ul>
+<blockquote class="book-hint info">
+  <p><strong>Advice</strong></p>
+<ul>
+<li>Init Tempest Config in same file as app config</li>
+</ul>
+</blockquote>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">init</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">GlobalConfig</span> = <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Config</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// App font family
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#a6e22e">FontFamily</span>: <span style="color:#e6db74">&#34;Sora, sans-serif&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// Aditional fonts
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#a6e22e">Font</span>: <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Font</span>{
+</span></span><span style="display:flex;"><span>			<span style="color:#e6db74">&#34;sora&#34;</span>: {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;Sora, sans-serif&#34;</span>,
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">Url</span>:   <span style="color:#e6db74">&#34;https://fonts.googleapis.com/css2?family=Sora:wght@100..800&amp;display=swap&#34;</span>,
+</span></span><span style="display:flex;"><span>			},
+</span></span><span style="display:flex;"><span>		},
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// Additional styles, which will be bundled
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#a6e22e">Styles</span>: []<span style="color:#66d9ef">string</span>{
+</span></span><span style="display:flex;"><span>			<span style="color:#e6db74">&#34;https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css&#34;</span>,
+</span></span><span style="display:flex;"><span>		},
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// Scripts to bundle
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#a6e22e">Scripts</span>: []<span style="color:#66d9ef">string</span>{
+</span></span><span style="display:flex;"><span>			<span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js&#34;</span>,
+</span></span><span style="display:flex;"><span>			<span style="color:#e6db74">&#34;https://unpkg.com/htmx.org@1.9.12&#34;</span>,
+</span></span><span style="display:flex;"><span>		},
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// Custom colors
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#a6e22e">Color</span>: <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Color</span>{
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">palette</span>.<span style="color:#a6e22e">Primary</span>: <span style="color:#a6e22e">palette</span>.<span style="color:#a6e22e">PrimaryPallete</span>,
+</span></span><span style="display:flex;"><span>		},
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// Custom shadows
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#a6e22e">Shadow</span>: <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>][]<span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Shadow</span>{
+</span></span><span style="display:flex;"><span>			<span style="color:#e6db74">&#34;focus&#34;</span>: {
+</span></span><span style="display:flex;"><span>				{
+</span></span><span style="display:flex;"><span>					<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;0 0 0 0.25rem&#34;</span>,
+</span></span><span style="display:flex;"><span>					<span style="color:#a6e22e">Hex</span>: <span style="color:#a6e22e">palette</span>.<span style="color:#a6e22e">PrimaryPallete</span>[<span style="color:#ae81ff">400</span>], 
+</span></span><span style="display:flex;"><span>					<span style="color:#a6e22e">Opacity</span>: <span style="color:#ae81ff">15</span>,
+</span></span><span style="display:flex;"><span>				},
+</span></span><span style="display:flex;"><span>			},
+</span></span><span style="display:flex;"><span>		},
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Start</span>()
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="start">
+  Start
+  <a class="anchor" href="#start">#</a>
+</h2>
+<p>Process and prepare all necessary things to provide frontend assets</p>
+<h2 id="assets-providing">
+  Assets providing
+  <a class="anchor" href="#assets-providing">#</a>
+</h2>
+<p>By default, Mirage has routes for dynamic Tempest content, so you don&rsquo;t need to worry about that</p>
+<h2 id="class">
+  Class
+  <a class="anchor" href="#class">#</a>
+</h2>
+<ul>
+<li><strong>tempest.Class()</strong> is factory, which create <strong>gox.Node</strong> class element or string</li>
+<li>Use methods chaining to apply all classes, you want to</li>
+</ul>
+<blockquote class="book-hint warning">
+  <p><strong>Warning</strong></p>
+<ul>
+<li>Not all classes have been implemented yet</li>
+</ul>
+</blockquote>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Div</span>(
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Class</span>().<span style="color:#a6e22e">P</span>(<span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">M</span>(<span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">TextSlate</span>(<span style="color:#ae81ff">900</span>).<span style="color:#a6e22e">TextWhite</span>(<span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Dark</span>())
+</span></span><span style="display:flex;"><span>),
+</span></span></code></pre></div><h2 id="component-action">
+  Component Action
+  <a class="anchor" href="#component-action">#</a>
+</h2>
+<ul>
+<li>If you use <strong>tempest.Class()</strong> in smart component action response, you have to add <strong>.Name(c.Request().Action())</strong></li>
+<li>Actions are dynamic and Tempest doesn&rsquo;t use request context, so they are stored by action name</li>
+<li>Not cached classes are dynamically added to response</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Class</span>().<span style="color:#a6e22e">Name</span>(<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Request</span>().<span style="color:#a6e22e">Action</span>()).<span style="color:#a6e22e">BgSlate</span>(<span style="color:#ae81ff">100</span>).<span style="color:#a6e22e">P</span>(<span style="color:#ae81ff">4</span>)
+</span></span></code></pre></div><h2 id="modifier">
+  Modifier
+  <a class="anchor" href="#modifier">#</a>
+</h2>
+<h3 id="placeholder">
+  Placeholder
+  <a class="anchor" href="#placeholder">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Class</span>().<span style="color:#a6e22e">TextSlate</span>(<span style="color:#ae81ff">900</span>).<span style="color:#a6e22e">TextSlate</span>(<span style="color:#ae81ff">400</span>, <span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Placeholder</span>())
+</span></span></code></pre></div><h3 id="dark">
+  Dark
+  <a class="anchor" href="#dark">#</a>
+</h3>
+<p>Classes with <strong>Dark()</strong> modifier will be used, if any parent has <strong>dark</strong> class</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Class</span>().<span style="color:#a6e22e">BgWhite</span>().<span style="color:#a6e22e">BgSlate</span>(<span style="color:#ae81ff">900</span>, <span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Dark</span>())
+</span></span></code></pre></div><blockquote class="book-hint info">
+  <p><strong>Advice</strong></p>
+<ul>
+<li>You can store dark mode in cookies and use dark in body class</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Body</span>(
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Clsx</span>{
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Class</span>().<span style="color:#a6e22e">Dark</span>(): <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Cookie</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;X-Dark-Mode&#34;</span>) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;true&#34;</span>,
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div>
+</blockquote>
+
+<h3 id="hover">
+  Hover
+  <a class="anchor" href="#hover">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Class</span>().<span style="color:#a6e22e">BgSlate</span>(<span style="color:#ae81ff">400</span>).<span style="color:#a6e22e">BgBlue</span>(<span style="color:#ae81ff">400</span>, <span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Hover</span>())
+</span></span></code></pre></div><h3 id="focus">
+  Focus
+  <a class="anchor" href="#focus">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Class</span>().<span style="color:#a6e22e">Border</span>(<span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">BorderSlate</span>(<span style="color:#ae81ff">300</span>).<span style="color:#a6e22e">BorderBlue</span>(<span style="color:#ae81ff">400</span>, <span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Focus</span>())
+</span></span></code></pre></div><h3 id="checked">
+  Checked
+  <a class="anchor" href="#checked">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Class</span>().
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">BgWhite</span>().<span style="color:#a6e22e">BgBlue</span>(<span style="color:#ae81ff">400</span>, <span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Checked</span>())
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Border</span>(<span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">BorderSlate</span>(<span style="color:#ae81ff">300</span>).<span style="color:#a6e22e">BorderBlue</span>(<span style="color:#ae81ff">400</span>, <span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Checked</span>())
+</span></span></code></pre></div><h3 id="peer">
+  Peer
+  <a class="anchor" href="#peer">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Class</span>().
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">BgWhite</span>().<span style="color:#a6e22e">BgBlue</span>(<span style="color:#ae81ff">400</span>, <span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Checked</span>(<span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Peer</span>))
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Border</span>(<span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">BorderSlate</span>(<span style="color:#ae81ff">300</span>).<span style="color:#a6e22e">BorderBlue</span>(<span style="color:#ae81ff">400</span>, <span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Checked</span>(<span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Peer</span>))
+</span></span></code></pre></div><h3 id="group">
+  Group
+  <a class="anchor" href="#group">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Class</span>().<span style="color:#a6e22e">BgWhite</span>().<span style="color:#a6e22e">BgBlue</span>(<span style="color:#ae81ff">400</span>, <span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Hover</span>(<span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Group</span>))
+</span></span></code></pre></div><h3 id="opacity">
+  Opacity
+  <a class="anchor" href="#opacity">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Class</span>().<span style="color:#a6e22e">BgSlate</span>(<span style="color:#ae81ff">900</span>, <span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Opacity</span>(<span style="color:#ae81ff">80</span>))
+</span></span></code></pre></div><h3 id="media-query">
+  Media query
+  <a class="anchor" href="#media-query">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Class</span>().
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">W</span>(<span style="color:#ae81ff">4</span>).
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">W</span>(<span style="color:#ae81ff">8</span>, <span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Xs</span>()).
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">W</span>(<span style="color:#ae81ff">12</span>, <span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Sm</span>()).
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">W</span>(<span style="color:#ae81ff">16</span>, <span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Md</span>()).
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">W</span>(<span style="color:#ae81ff">24</span>, <span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Lg</span>()).
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">W</span>(<span style="color:#ae81ff">32</span>, <span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Xl</span>()).
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">W</span>(<span style="color:#ae81ff">64</span>, <span style="color:#a6e22e">tempest</span>.<span style="color:#a6e22e">Xxl</span>())
+</span></span></code></pre></div></article>
  
       
 
@@ -701,7 +889,28 @@ https://github.com/alex-shpak/hugo-book
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#config">Config</a></li>
+    <li><a href="#start">Start</a></li>
+    <li><a href="#assets-providing">Assets providing</a></li>
+    <li><a href="#class">Class</a></li>
+    <li><a href="#component-action">Component Action</a></li>
+    <li><a href="#modifier">Modifier</a>
+      <ul>
+        <li><a href="#placeholder">Placeholder</a></li>
+        <li><a href="#dark">Dark</a></li>
+        <li><a href="#hover">Hover</a></li>
+        <li><a href="#focus">Focus</a></li>
+        <li><a href="#checked">Checked</a></li>
+        <li><a href="#peer">Peer</a></li>
+        <li><a href="#group">Group</a></li>
+        <li><a href="#opacity">Opacity</a></li>
+        <li><a href="#media-query">Media query</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
  
