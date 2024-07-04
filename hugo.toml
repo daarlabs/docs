@@ -1,6 +1,6 @@
-baseURL = 'https://arcanum.daar.cz'
+baseURL = 'https://hirokit.daar.cz'
 languageCode = 'en-us'
-title = 'Arcanum'
+title = 'Hirokit'
 
 [module]
 [[module.imports]]

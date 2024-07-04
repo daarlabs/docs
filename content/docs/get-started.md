@@ -26,6 +26,6 @@ Your app will be running on [localhost](http://localhost)
 {{< columns >}}
 
 ## Next step
-[Config](/docs/packages/mirage/config/)
+[Config](/docs/packages/hiro/config/)
 
 {{< /columns >}}

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Docs on Arcanum</title>
-    <link>https://arcanum.daar.cz/docs/</link>
-    <description>Recent content in Docs on Arcanum</description>
+    <title>Docs on Hirokit</title>
+    <link>https://hirokit.daar.cz/docs/</link>
+    <description>Recent content in Docs on Hirokit</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://arcanum.daar.cz/docs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hirokit.daar.cz/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/get-started/</link>
+      <link>https://hirokit.daar.cz/docs/get-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/get-started/</guid>
+      <guid>https://hirokit.daar.cz/docs/get-started/</guid>
       <description>Get started # Requirements:&#xA;Docker Go 1.22+ Optional:&#xA;Tilt Clone starter repository # git clone https://github.com/daarlabs/starter.git Start the app # tilt up # OR docker compose up Your app will be running on localhost&#xA;Next step # Config</description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/gox/</link>
+      <link>https://hirokit.daar.cz/docs/packages/gox/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/gox/</guid>
-      <description>Gox # HTML knowledge required Composable pure function view layer You can use any HTML element as Go func Advice&#xA;Use import alias import . &amp;ldquo;github.com/daarlabs/arcanum/gox&amp;rdquo; Be careful with naming convention to prevent HTML nodes names collisions Sample code # package app import ( . &amp;#34;github.com/daarlabs/arcanum/gox&amp;#34; ) func Page() string { return Render( Html( Lang(&amp;#34;en&amp;#34;), Head( Title(Text(&amp;#34;Example app&amp;#34;)), ), Body( H1(Text(&amp;#34;Example page&amp;#34;)), P(Text(&amp;#34;Example paragraph&amp;#34;)), ), ), ) } Render # Render function transform Gox nodes to string</description>
+      <guid>https://hirokit.daar.cz/docs/packages/gox/</guid>
+      <description>Gox # HTML knowledge required Composable pure function view layer You can use any HTML element as Go func Advice&#xA;Use import alias import . &amp;ldquo;github.com/daarlabs/hirokit/gox&amp;rdquo; Be careful with naming convention to prevent HTML nodes names collisions Sample code # package app import ( . &amp;#34;github.com/daarlabs/hirokit/gox&amp;#34; ) func Page() string { return Render( Html( Lang(&amp;#34;en&amp;#34;), Head( Title(Text(&amp;#34;Example app&amp;#34;)), ), Body( H1(Text(&amp;#34;Example page&amp;#34;)), P(Text(&amp;#34;Example paragraph&amp;#34;)), ), ), ) } Render # Render function transform Gox nodes to string</description>
     </item>
   </channel>
 </rss>

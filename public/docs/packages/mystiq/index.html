@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Mystiq # Dynamic data manager Supports manual provided data, database data or data factory functions Used in dynamic components like: autocomplete, datatable ">
+<meta name="description" content="Mystiq # Dynamic data manager Supports manual provided data, database data or data factory functions Used in dynamic components like: autocomplete, datatable Database query uses Quirk New instance # mystiq.New() Query data model # type Query struct { Table string Alias string Value string Fields map[string]string } Table # Database table name
+Alias # Datatable table alias
+Value # Datatable table field name, like id
+Fields # Datatable fields aliases, suitable for smart components">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://arcanum.daar.cz/docs/packages/mystiq/">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/packages/mystiq/">
   <meta property="og:site_name" content="Arcanum">
   <meta property="og:title" content="Arcanum">
-  <meta property="og:description" content=" Mystiq # Dynamic data manager Supports manual provided data, database data or data factory functions Used in dynamic components like: autocomplete, datatable ">
+  <meta property="og:description" content="Mystiq # Dynamic data manager Supports manual provided data, database data or data factory functions Used in dynamic components like: autocomplete, datatable Database query uses Quirk New instance # mystiq.New() Query data model # type Query struct { Table string Alias string Value string Fields map[string]string } Table # Database table name
+Alias # Datatable table alias
+Value # Datatable table field name, like id
+Fields # Datatable fields aliases, suitable for smart components">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 <title>Mystiq | Arcanum</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" >
-<link rel="canonical" href="https://arcanum.daar.cz/docs/packages/mystiq/">
+<link rel="canonical" href="http://localhost:1313/docs/packages/mystiq/">
 <link rel="stylesheet" href="/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.9417ef69a99682338c69d039c1bdc3d2168fa4cfd660fa5feafcf8491228363a.js" integrity="sha256-lBfvaamWgjOMadA5wb3D0haPpM/WYPpf6vz4SRIoNjo=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.15159c5fb50d9264f4404a009983cd10469938eeb3d4d5e70fc0cd4a8e2f8296.js" integrity="sha256-FRWcX7UNkmT0QEoAmYPNEEaZOO6z1NXnD8DNSo4vgpY=" crossorigin="anonymous"></script>
 
   
 
-<link rel="alternate" type="application/rss+xml" href="https://arcanum.daar.cz/docs/packages/mystiq/index.xml" title="Arcanum" />
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/packages/mystiq/index.xml" title="Arcanum" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -88,7 +94,43 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="/docs/packages/cli/" class="">CLI</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="/docs/packages/crest/" class="">Crest</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/form/" class="">Form</a>
   
 
           
@@ -424,19 +466,6 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/packages/mirage/form/" class="">Form</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
     <a href="/docs/packages/mirage/handler/" class="">Handler</a>
   
 
@@ -643,7 +672,42 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#new-instance">New instance</a></li>
+    <li><a href="#query-data-model">Query data model</a>
+      <ul>
+        <li><a href="#table">Table</a></li>
+        <li><a href="#alias">Alias</a></li>
+        <li><a href="#value">Value</a></li>
+        <li><a href="#fields">Fields</a></li>
+      </ul>
+    </li>
+    <li><a href="#set-db">Set DB</a></li>
+    <li><a href="#set-data">Set Data</a></li>
+    <li><a href="#parse-params-from-miragectx">Parse params from mirage.Ctx</a></li>
+    <li><a href="#use-params-on-quirk-query">Use params on Quirk query</a></li>
+    <li><a href="#get-data">Get data</a>
+      <ul>
+        <li><a href="#get-all">Get All</a></li>
+        <li><a href="#get-one">Get One</a></li>
+        <li><a href="#get-many">Get Many</a></li>
+      </ul>
+    </li>
+    <li><a href="#override-data-get">Override data get</a>
+      <ul>
+        <li><a href="#get-all-func">Get All Func</a></li>
+        <li><a href="#get-one-func">Get One Func</a></li>
+        <li><a href="#get-many-func">Get Many Func</a></li>
+      </ul>
+    </li>
+    <li><a href="#util">Util</a>
+      <ul>
+        <li><a href="#create-select">Create Select</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
 
@@ -662,8 +726,143 @@ https://github.com/alex-shpak/hugo-book
 <li>Dynamic data manager</li>
 <li>Supports manual provided data, database data or data factory functions</li>
 <li>Used in dynamic components like: <strong>autocomplete</strong>, <strong>datatable</strong></li>
+<li>Database query uses <a href="/docs/packages/quirk/" target="_blank">Quirk</a></li>
 </ul>
-</article>
+<h2 id="new-instance">
+  New instance
+  <a class="anchor" href="#new-instance">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">mystiq</span>.<span style="color:#a6e22e">New</span>()
+</span></span></code></pre></div><h2 id="query-data-model">
+  Query data model
+  <a class="anchor" href="#query-data-model">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Query</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Table</span>  <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Alias</span>  <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Value</span>  <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Fields</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="table">
+  Table
+  <a class="anchor" href="#table">#</a>
+</h3>
+<p>Database table name</p>
+<h3 id="alias">
+  Alias
+  <a class="anchor" href="#alias">#</a>
+</h3>
+<p>Datatable table alias</p>
+<h3 id="value">
+  Value
+  <a class="anchor" href="#value">#</a>
+</h3>
+<p>Datatable table field name, like <strong>id</strong></p>
+<h3 id="fields">
+  Fields
+  <a class="anchor" href="#fields">#</a>
+</h3>
+<p>Datatable fields aliases, suitable for smart components</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Fields</span>: <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;text&#34;</span>:   <span style="color:#e6db74">&#34;e.name&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;value&#34;</span>:  <span style="color:#e6db74">&#34;e.id&#34;</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="set-db">
+  Set DB
+  <a class="anchor" href="#set-db">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">mystiq</span>.<span style="color:#a6e22e">New</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">m</span>.<span style="color:#a6e22e">DB</span>(<span style="color:#a6e22e">db</span>, <span style="color:#a6e22e">query</span>)
+</span></span></code></pre></div><h2 id="set-data">
+  Set Data
+  <a class="anchor" href="#set-data">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">mystiq</span>.<span style="color:#a6e22e">New</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">m</span>.<span style="color:#a6e22e">Data</span>([]<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#a6e22e">any</span>{
+</span></span><span style="display:flex;"><span>    { <span style="color:#e6db74">&#34;value&#34;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Text 1&#34;</span> },
+</span></span><span style="display:flex;"><span>    { <span style="color:#e6db74">&#34;value&#34;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Text 2&#34;</span> },
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div><h2 id="parse-params-from-miragectx">
+  Parse params from mirage.Ctx
+  <a class="anchor" href="#parse-params-from-miragectx">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">param</span> <span style="color:#a6e22e">mystiq</span>.<span style="color:#a6e22e">Param</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">param</span> = <span style="color:#a6e22e">param</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">c</span>)
+</span></span></code></pre></div><h2 id="use-params-on-quirk-query">
+  Use params on Quirk query
+  <a class="anchor" href="#use-params-on-quirk-query">#</a>
+</h2>
+<ul>
+<li>Generates conditions, sorting, offseting, limiting</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">param</span> <span style="color:#a6e22e">mystiq</span>.<span style="color:#a6e22e">Param</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">param</span> = <span style="color:#a6e22e">param</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">c</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">q</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">Q</span>(<span style="color:#e6db74">`...`</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">param</span>.<span style="color:#a6e22e">Use</span>(<span style="color:#a6e22e">q</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">q</span>.<span style="color:#a6e22e">MustExec</span>()
+</span></span></code></pre></div><h2 id="get-data">
+  Get data
+  <a class="anchor" href="#get-data">#</a>
+</h2>
+<ul>
+<li>Automatically choose data source (manual data / database), <br> if override func exists, prefers that</li>
+</ul>
+<h3 id="get-all">
+  Get All
+  <a class="anchor" href="#get-all">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">GetAll</span>(<span style="color:#a6e22e">param</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">target</span>)
+</span></span></code></pre></div><h3 id="get-one">
+  Get One
+  <a class="anchor" href="#get-one">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">GetOne</span>(<span style="color:#e6db74">&#34;id&#34;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">target</span>)
+</span></span></code></pre></div><h3 id="get-many">
+  Get Many
+  <a class="anchor" href="#get-many">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">GetMany</span>(<span style="color:#e6db74">&#34;id&#34;</span>, []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>}, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">target</span>)
+</span></span></code></pre></div><h2 id="override-data-get">
+  Override data get
+  <a class="anchor" href="#override-data-get">#</a>
+</h2>
+<h3 id="get-all-func">
+  Get All Func
+  <a class="anchor" href="#get-all-func">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">GetAllFunc</span>(<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">param</span> <span style="color:#a6e22e">Param</span>, <span style="color:#a6e22e">t</span> <span style="color:#a6e22e">any</span>) <span style="color:#66d9ef">error</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div><h3 id="get-one-func">
+  Get One Func
+  <a class="anchor" href="#get-one-func">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">GetOneFunc</span>(<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">name</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">v</span> <span style="color:#a6e22e">any</span>, <span style="color:#a6e22e">t</span> <span style="color:#a6e22e">any</span>) <span style="color:#66d9ef">error</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div><h3 id="get-many-func">
+  Get Many Func
+  <a class="anchor" href="#get-many-func">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">GetManyFunc</span>(<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">name</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">v</span> <span style="color:#a6e22e">any</span>, <span style="color:#a6e22e">t</span> <span style="color:#a6e22e">any</span>) <span style="color:#66d9ef">error</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div><h2 id="util">
+  Util
+  <a class="anchor" href="#util">#</a>
+</h2>
+<h3 id="create-select">
+  Create Select
+  <a class="anchor" href="#create-select">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span> <span style="color:#75715e">// third param is not required, because id is default value field
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">CreateSelect</span>(<span style="color:#e6db74">&#34;examples&#34;</span>, <span style="color:#e6db74">&#34;name&#34;</span>, <span style="color:#e6db74">&#34;id&#34;</span>) <span style="color:#a6e22e">Query</span>
+</span></span></code></pre></div></article>
  
       
 
@@ -702,7 +901,42 @@ https://github.com/alex-shpak/hugo-book
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#new-instance">New instance</a></li>
+    <li><a href="#query-data-model">Query data model</a>
+      <ul>
+        <li><a href="#table">Table</a></li>
+        <li><a href="#alias">Alias</a></li>
+        <li><a href="#value">Value</a></li>
+        <li><a href="#fields">Fields</a></li>
+      </ul>
+    </li>
+    <li><a href="#set-db">Set DB</a></li>
+    <li><a href="#set-data">Set Data</a></li>
+    <li><a href="#parse-params-from-miragectx">Parse params from mirage.Ctx</a></li>
+    <li><a href="#use-params-on-quirk-query">Use params on Quirk query</a></li>
+    <li><a href="#get-data">Get data</a>
+      <ul>
+        <li><a href="#get-all">Get All</a></li>
+        <li><a href="#get-one">Get One</a></li>
+        <li><a href="#get-many">Get Many</a></li>
+      </ul>
+    </li>
+    <li><a href="#override-data-get">Override data get</a>
+      <ul>
+        <li><a href="#get-all-func">Get All Func</a></li>
+        <li><a href="#get-one-func">Get One Func</a></li>
+        <li><a href="#get-many-func">Get Many Func</a></li>
+      </ul>
+    </li>
+    <li><a href="#util">Util</a>
+      <ul>
+        <li><a href="#create-select">Create Select</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
  

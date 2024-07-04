@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Esquel # Database abstraction layer Only supports Postgres, right now Connection # Use with Config
+func Postgres() *esquel.DB { return esquel.MustConnect( esquel.WithPostgres(), esquel.WithHost(&#34;localhost&#34;), esquel.WithPort(5432), esquel.WithDbname(&#34;postgres&#34;), esquel.WithUser(&#34;postgres&#34;), esquel.WithPassword(&#34;postgres&#34;), esquel.WithSslDisable(), esquel.WithLog(true), esquel.WithTimeout(esquel.DefaultTimeout), ) } Data model # By default, Esquel uses fields camelCase name transformed to snake_case Field name can be overriden with db tag Nullable fields need sql.Null[T] type For filling nullable fields, you can use esquel.Nullable[T any](value T) type Example struct { Id int FooBar string `db:&#34;foo_bar&#34;` Nullable sql.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://hirokit.daar.cz/docs/packages/esquel/">
+  <meta property="og:site_name" content="Hirokit">
+  <meta property="og:title" content="Hirokit">
+  <meta property="og:description" content="Esquel # Database abstraction layer Only supports Postgres, right now Connection # Use with Config
+func Postgres() *esquel.DB { return esquel.MustConnect( esquel.WithPostgres(), esquel.WithHost(&#34;localhost&#34;), esquel.WithPort(5432), esquel.WithDbname(&#34;postgres&#34;), esquel.WithUser(&#34;postgres&#34;), esquel.WithPassword(&#34;postgres&#34;), esquel.WithSslDisable(), esquel.WithLog(true), esquel.WithTimeout(esquel.DefaultTimeout), ) } Data model # By default, Esquel uses fields camelCase name transformed to snake_case Field name can be overriden with db tag Nullable fields need sql.Null[T] type For filling nullable fields, you can use esquel.Nullable[T any](value T) type Example struct { Id int FooBar string `db:&#34;foo_bar&#34;` Nullable sql.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+<title>Esquel | Hirokit</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="canonical" href="https://hirokit.daar.cz/docs/packages/esquel/">
+<link rel="stylesheet" href="/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.f50940afd80338a0bd40e20e4083d09f1cdf6013bc76098ed8c2292d3557864d.js" integrity="sha256-9QlAr9gDOKC9QOIOQIPQnxzfYBO8dgmO2MIpLTVXhk0=" crossorigin="anonymous"></script>
+
+  
+
+<link rel="alternate" type="application/rss+xml" href="https://hirokit.daar.cz/docs/packages/esquel/index.xml" title="Hirokit" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Hirokit</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/get-started/" class="">Get Started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/cli/" class="">CLI</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/dyna/" class="">Dyna</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/esquel/" class="active">Esquel</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/form/" class="">Form</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/gox/" class="">Gox</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-28be4f4937312eec989893f9d3d6614a" class="toggle"  />
+    <label for="section-28be4f4937312eec989893f9d3d6614a" class="flex justify-between">
+      <a href="/docs/packages/hiro/" class="">Hiro</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/assets/" class="">Assets</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/auth/" class="">Auth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/cache/" class="">Cache</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/component/" class="">Component</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/config/" class="">Config</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b044c9387d2cda910c81548989c9bf53" class="toggle"  />
+    <label for="section-b044c9387d2cda910c81548989c9bf53" class="flex justify-between">
+      <a href="/docs/packages/hiro/context/" class="">Context</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/context/component/" class="">Component</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/context/factory/" class="">Factory</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/context/flash-message/" class="">Flash Message</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/context/generator/" class="">Generator</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/context/interceptor/" class="">Interceptor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/context/page/" class="">Page</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a95da1cd0be2f96892995f17acef0d12" class="toggle"  />
+    <label for="section-a95da1cd0be2f96892995f17acef0d12" class="flex justify-between">
+      <a href="/docs/packages/hiro/context/request/" class="">Request</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/context/request/is/" class="">Is</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/context/response/" class="">Response</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/context/state/" class="">State</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/cookies/" class="">Cookies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/csrf/" class="">Csrf</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/database/" class="">Database</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/filesystem/" class="">Filesystem</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/firewall/" class="">Firewall</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/handler/" class="">Handler</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/layout/" class="">Layout</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/localization/" class="">Localization</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/mailer/" class="">Mailer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/middleware/" class="">Middleware</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/plugin/" class="">Plugin</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/router/" class="">Router</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/view/" class="">View</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/tempest/" class="">Tempest</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Esquel</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#connection">Connection</a></li>
+    <li><a href="#data-model">Data model</a></li>
+    <li><a href="#query">Query</a></li>
+    <li><a href="#if">If</a></li>
+    <li><a href="#factory">Factory</a>
+      <ul>
+        <li><a href="#create-insert">Create Insert</a></li>
+        <li><a href="#create-update">Create Update</a></li>
+      </ul>
+    </li>
+    <li><a href="#in">In</a></li>
+    <li><a href="#transactions">Transactions</a></li>
+    <li><a href="#postgres-type">Postgres Type</a>
+      <ul>
+        <li><a href="#jsonb">Jsonb</a></li>
+      </ul>
+    </li>
+    <li><a href="#postgres-utils">Postgres Utils</a>
+      <ul>
+        <li><a href="#createtsvector">CreateTsVector</a></li>
+        <li><a href="#createtsquery">CreateTsQuery</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="esquel">
+  Esquel
+  <a class="anchor" href="#esquel">#</a>
+</h1>
+<ul>
+<li>Database abstraction layer</li>
+<li>Only supports <strong>Postgres</strong>, right now</li>
+</ul>
+<h2 id="connection">
+  Connection
+  <a class="anchor" href="#connection">#</a>
+</h2>
+<p>Use with <a href="/docs/packages/hiro/config/#database" target="_blank">Config</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Postgres</span>() <span style="color:#f92672">*</span><span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">DB</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">MustConnect</span>(
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">WithPostgres</span>(),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">WithHost</span>(<span style="color:#e6db74">&#34;localhost&#34;</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">WithPort</span>(<span style="color:#ae81ff">5432</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">WithDbname</span>(<span style="color:#e6db74">&#34;postgres&#34;</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">WithUser</span>(<span style="color:#e6db74">&#34;postgres&#34;</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">WithPassword</span>(<span style="color:#e6db74">&#34;postgres&#34;</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">WithSslDisable</span>(),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">WithLog</span>(<span style="color:#66d9ef">true</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">WithTimeout</span>(<span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">DefaultTimeout</span>),
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="data-model">
+  Data model
+  <a class="anchor" href="#data-model">#</a>
+</h2>
+<ul>
+<li>By default, Esquel uses fields camelCase name transformed to snake_case</li>
+<li>Field name can be overriden with <strong>db tag</strong></li>
+<li>Nullable fields need <strong>sql.Null[T]</strong> type</li>
+<li>For filling nullable fields, you can use <strong>esquel.Nullable[T any](value T)</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Example</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Id</span>          <span style="color:#66d9ef">int</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">FooBar</span>      <span style="color:#66d9ef">string</span>            <span style="color:#e6db74">`db:&#34;foo_bar&#34;`</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Nullable</span>    <span style="color:#a6e22e">sql</span>.<span style="color:#a6e22e">Null</span>[<span style="color:#66d9ef">string</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">data</span> = <span style="color:#a6e22e">Example</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Nullable</span>: <span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">Nullable</span>(<span style="color:#e6db74">&#34;foo&#34;</span>),
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><blockquote class="book-hint info">
+  <p><strong>Advice</strong></p>
+<ul>
+<li>If you have some relationship to another table with some id in your data model and it can be <strong>NULL</strong>, you have to use <strong>sql.Null[int64]</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">RelationshipId</span>  <span style="color:#a6e22e">sql</span>.<span style="color:#a6e22e">Null</span>[<span style="color:#66d9ef">int64</span>]  <span style="color:#e6db74">`db:&#34;relationship_id&#34;`</span>
+</span></span></code></pre></div>
+</blockquote>
+
+<h2 id="query">
+  Query
+  <a class="anchor" href="#query">#</a>
+</h2>
+<ul>
+<li>Query can be splitted in parts</li>
+<li>Each part can have own params</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">MustGetAll</span>(<span style="color:#a6e22e">db</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">DB</span>) []<span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">Example</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">result</span> <span style="color:#f92672">:=</span> make([]<span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">Example</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">Q</span>(<span style="color:#e6db74">`SELECT *`</span>).
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Q</span>(<span style="color:#e6db74">`FROM examples`</span>).
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Q</span>(<span style="color:#e6db74">`WHERE category = @category`</span>, <span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">Param</span>{<span style="color:#e6db74">&#34;category&#34;</span>: <span style="color:#e6db74">&#34;foo&#34;</span>}).
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Q</span>(<span style="color:#e6db74">`LIMIT 20`</span>).
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">MustExec</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">result</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="if">
+  If
+  <a class="anchor" href="#if">#</a>
+</h2>
+<ul>
+<li>Query part  will be used if condition is true</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">MustGetAll</span>(<span style="color:#a6e22e">db</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">DB</span>, <span style="color:#a6e22e">category</span> <span style="color:#66d9ef">string</span>) []<span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">Example</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">result</span> <span style="color:#f92672">:=</span> make([]<span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">Example</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">Q</span>(<span style="color:#e6db74">`SELECT *`</span>).
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Q</span>(<span style="color:#e6db74">`FROM examples`</span>).
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">If</span>(
+</span></span><span style="display:flex;"><span>          len(<span style="color:#a6e22e">category</span>) &gt; <span style="color:#ae81ff">0</span>, 
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">`WHERE category = @category`</span>, <span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">Param</span>{<span style="color:#e6db74">&#34;category&#34;</span>: <span style="color:#a6e22e">category</span>}, 
+</span></span><span style="display:flex;"><span>        ).
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Q</span>(<span style="color:#e6db74">`LIMIT 20`</span>).
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">MustExec</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">result</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="factory">
+  Factory
+  <a class="anchor" href="#factory">#</a>
+</h2>
+<ul>
+<li>Utils, which can help you to create <strong>INSERT</strong> or <strong>UPDATE</strong> fields and placeholders strings</li>
+</ul>
+<h3 id="create-insert">
+  Create Insert
+  <a class="anchor" href="#create-insert">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">data</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">Param</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;first_name&#34;</span>: <span style="color:#e6db74">&#34;Foo&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;last_name&#34;</span>:  <span style="color:#e6db74">&#34;Bar&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;age&#34;</span>:        <span style="color:#ae81ff">30</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fields</span>, <span style="color:#a6e22e">placeholders</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">CreateInsert</span>(<span style="color:#a6e22e">data</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">id</span> <span style="color:#66d9ef">int</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">Q</span>(<span style="color:#e6db74">`INSERT INTO examples`</span>).
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Q</span>(<span style="color:#e6db74">&#34;(&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">fields</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;)&#34;</span>).
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Q</span>(<span style="color:#e6db74">&#34;VALUES (&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">placeholders</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;)&#34;</span>, <span style="color:#a6e22e">data</span>).
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Q</span>(<span style="color:#e6db74">&#34;RETURNING id&#34;</span>).
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">MustExec</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">id</span>)
+</span></span></code></pre></div><h3 id="create-update">
+  Create Update
+  <a class="anchor" href="#create-update">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">data</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">Param</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;first_name&#34;</span>: <span style="color:#e6db74">&#34;Bar&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;last_name&#34;</span>:  <span style="color:#e6db74">&#34;Foo&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;age&#34;</span>:        <span style="color:#ae81ff">31</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">Q</span>(<span style="color:#e6db74">`UPDATE examples`</span>).
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Q</span>(<span style="color:#e6db74">&#34;SET &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">CreateUpdate</span>(<span style="color:#a6e22e">data</span>), <span style="color:#a6e22e">data</span>).
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Q</span>(<span style="color:#e6db74">&#34;WHERE id = @id&#34;</span>, <span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">Map</span>{<span style="color:#e6db74">&#34;id&#34;</span>: <span style="color:#ae81ff">1</span>}).
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">MustExec</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">id</span>)
+</span></span></code></pre></div><h2 id="in">
+  In
+  <a class="anchor" href="#in">#</a>
+</h2>
+<ul>
+<li>Arrays are automatically recognized, no need of any additional operation</li>
+<li><strong>IN</strong> is automatically transformed to <strong>ANY</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Where</span>(<span style="color:#e6db74">`id IN (@ids)`</span>, <span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">Param</span>{<span style="color:#e6db74">&#34;ids&#34;</span>: []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>}})
+</span></span></code></pre></div><h2 id="transactions">
+  Transactions
+  <a class="anchor" href="#transactions">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">tx</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">MustBegin</span>()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">someError</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">tx</span>.<span style="color:#a6e22e">MustRollback</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">tx</span>.<span style="color:#a6e22e">MustCommit</span>()
+</span></span></code></pre></div><h2 id="postgres-type">
+  Postgres Type
+  <a class="anchor" href="#postgres-type">#</a>
+</h2>
+<h3 id="jsonb">
+  Jsonb
+  <a class="anchor" href="#jsonb">#</a>
+</h3>
+<ul>
+<li>Esquel custom type</li>
+<li>You can transform map to jsonb with <strong>MapToJsonb</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Example</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">SomeMap</span> <span style="color:#a6e22e">Jsonb</span>[<span style="color:#66d9ef">string</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">data</span> = <span style="color:#a6e22e">Example</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">SomeMap</span>: <span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">MapToJsonb</span>(<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>{
+</span></span><span style="display:flex;"><span>	  <span style="color:#e6db74">&#34;foo&#34;</span>: <span style="color:#e6db74">&#34;bar&#34;</span>,	
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="postgres-utils">
+  Postgres Utils
+  <a class="anchor" href="#postgres-utils">#</a>
+</h2>
+<h3 id="createtsvector">
+  CreateTsVector
+  <a class="anchor" href="#createtsvector">#</a>
+</h3>
+<p>Create tsvector values from any primitive type</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Where</span>(
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;INSERT INTO examples (vectors) VALUES (to_tsvector(@vectors))&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">Param</span>{<span style="color:#e6db74">&#34;vectors&#34;</span>: <span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">CreateTsVector</span>(<span style="color:#e6db74">&#34;foo&#34;</span>, <span style="color:#e6db74">&#34;bar&#34;</span>)},
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h3 id="createtsquery">
+  CreateTsQuery
+  <a class="anchor" href="#createtsquery">#</a>
+</h3>
+<p>Create tsquery values from any primitive type</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Where</span>(
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;vectors @@ to_tsquery(@tsquery)&#34;</span>, 
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">Param</span>{<span style="color:#e6db74">&#34;tsquery&#34;</span>: <span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">CreateTsQuery</span>(<span style="color:#e6db74">&#34;foo&#34;</span>, <span style="color:#e6db74">&#34;bar&#34;</span>)},
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#connection">Connection</a></li>
+    <li><a href="#data-model">Data model</a></li>
+    <li><a href="#query">Query</a></li>
+    <li><a href="#if">If</a></li>
+    <li><a href="#factory">Factory</a>
+      <ul>
+        <li><a href="#create-insert">Create Insert</a></li>
+        <li><a href="#create-update">Create Update</a></li>
+      </ul>
+    </li>
+    <li><a href="#in">In</a></li>
+    <li><a href="#transactions">Transactions</a></li>
+    <li><a href="#postgres-type">Postgres Type</a>
+      <ul>
+        <li><a href="#jsonb">Jsonb</a></li>
+      </ul>
+    </li>
+    <li><a href="#postgres-utils">Postgres Utils</a>
+      <ul>
+        <li><a href="#createtsvector">CreateTsVector</a></li>
+        <li><a href="#createtsquery">CreateTsQuery</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

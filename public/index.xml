@@ -1,220 +1,213 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Arcanum</title>
-    <link>https://arcanum.daar.cz/</link>
-    <description>Recent content on Arcanum</description>
+    <title>Hirokit</title>
+    <link>https://hirokit.daar.cz/</link>
+    <description>Recent content on Hirokit</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://arcanum.daar.cz/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hirokit.daar.cz/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/get-started/</link>
+      <link>https://hirokit.daar.cz/docs/get-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/get-started/</guid>
+      <guid>https://hirokit.daar.cz/docs/get-started/</guid>
       <description>Get started # Requirements:&#xA;Docker Go 1.22+ Optional:&#xA;Tilt Clone starter repository # git clone https://github.com/daarlabs/starter.git Start the app # tilt up # OR docker compose up Your app will be running on localhost&#xA;Next step # Config</description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/gox/</link>
+      <link>https://hirokit.daar.cz/docs/packages/gox/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/gox/</guid>
-      <description>Gox # HTML knowledge required Composable pure function view layer You can use any HTML element as Go func Advice&#xA;Use import alias import . &amp;ldquo;github.com/daarlabs/arcanum/gox&amp;rdquo; Be careful with naming convention to prevent HTML nodes names collisions Sample code # package app import ( . &amp;#34;github.com/daarlabs/arcanum/gox&amp;#34; ) func Page() string { return Render( Html( Lang(&amp;#34;en&amp;#34;), Head( Title(Text(&amp;#34;Example app&amp;#34;)), ), Body( H1(Text(&amp;#34;Example page&amp;#34;)), P(Text(&amp;#34;Example paragraph&amp;#34;)), ), ), ) } Render # Render function transform Gox nodes to string</description>
+      <guid>https://hirokit.daar.cz/docs/packages/gox/</guid>
+      <description>Gox # HTML knowledge required Composable pure function view layer You can use any HTML element as Go func Advice&#xA;Use import alias import . &amp;ldquo;github.com/daarlabs/hirokit/gox&amp;rdquo; Be careful with naming convention to prevent HTML nodes names collisions Sample code # package app import ( . &amp;#34;github.com/daarlabs/hirokit/gox&amp;#34; ) func Page() string { return Render( Html( Lang(&amp;#34;en&amp;#34;), Head( Title(Text(&amp;#34;Example app&amp;#34;)), ), Body( H1(Text(&amp;#34;Example page&amp;#34;)), P(Text(&amp;#34;Example paragraph&amp;#34;)), ), ), ) } Render # Render function transform Gox nodes to string</description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/assets/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/assets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/assets/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/assets/</guid>
       <description> Assets # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/auth/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/auth/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/auth/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/auth/</guid>
       <description> Auth # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/cache/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/cache/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/cache/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/cache/</guid>
       <description> Cache # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/component/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/component/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/component/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/component/</guid>
       <description> Component # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/config/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/config/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/config/</guid>
-      <description>Config # App # App: config.App{ Name: &amp;#34;your-app-name&amp;#34;, Plugin: true // If it&amp;#39;s plugin, not an app PublicUrlPath: &amp;#34;/public/&amp;#34;, PublicLocalDir: &amp;#34;./public/&amp;#34;, } Plugin # Plugins like Farah UI, based on Mirage, must be registered, they need set the field to true&#xA;Cache # Cache by default uses memory package, but recommended way is to use Redis (or Redis-compatible database) Redis client Cache: config.Cache{ // Custom memory dir, which persist cache state memory: memory.</description>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/config/</guid>
+      <description>Config # App # App: config.App{ Name: &amp;#34;your-app-name&amp;#34;, Plugin: true // If it&amp;#39;s plugin, not an app PublicUrlPath: &amp;#34;/public/&amp;#34;, PublicLocalDir: &amp;#34;./public/&amp;#34;, } Plugin # Plugins like Farah UI, based on Hiro, must be registered, they need set the field to true&#xA;Cache # Cache by default uses memory package, but recommended way is to use Redis (or Redis-compatible database) Redis client Cache: config.Cache{ // Custom memory dir, which persist cache state memory: memory.</description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/context/component/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/context/component/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/component/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/context/component/</guid>
       <description> Context - Component # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/context/factory/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/context/factory/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/factory/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/context/factory/</guid>
       <description> Context - Factory # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/context/flash-message/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/context/flash-message/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/flash-message/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/context/flash-message/</guid>
       <description> Context - Flash Message # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/context/generator/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/context/generator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/generator/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/context/generator/</guid>
       <description> Context - Generator # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/context/interceptor/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/context/interceptor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/interceptor/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/context/interceptor/</guid>
       <description> Interceptor # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/context/page/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/context/page/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/page/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/context/page/</guid>
       <description> Context - Page # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/context/request/is/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/context/request/is/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/request/is/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/context/request/is/</guid>
       <description> Request - Is # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/context/response/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/context/response/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/response/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/context/response/</guid>
       <description> Response # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/context/state/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/context/state/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/context/state/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/context/state/</guid>
       <description> Context - State # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/cookies/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/cookies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/cookies/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/cookies/</guid>
       <description> Cookies # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/csrf/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/csrf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/csrf/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/csrf/</guid>
       <description> CSRF # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/database/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/database/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/database/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/database/</guid>
       <description> Database # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/filesystem/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/filesystem/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/filesystem/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/filesystem/</guid>
       <description> Filesystem # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/firewall/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/firewall/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/firewall/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/firewall/</guid>
       <description> Firewall # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/form/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/handler/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/form/</guid>
-      <description> Form # </description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/handler/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/handler/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/handler/</guid>
       <description> Handler # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/layout/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/layout/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/layout/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/layout/</guid>
       <description> Layout # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/localization/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/localization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/localization/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/localization/</guid>
       <description> Localization # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/mailer/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/mailer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/mailer/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/mailer/</guid>
       <description> Mailer # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/middleware/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/middleware/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/middleware/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/middleware/</guid>
       <description> Middleware # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/plugin/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/plugin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/plugin/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/plugin/</guid>
       <description> Plugin # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/router/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/router/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/router/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/router/</guid>
       <description> Router # </description>
     </item>
     <item>
       <title></title>
-      <link>https://arcanum.daar.cz/docs/packages/mirage/view/</link>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/view/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://arcanum.daar.cz/docs/packages/mirage/view/</guid>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/view/</guid>
       <description> View # </description>
     </item>
   </channel>

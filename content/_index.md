@@ -1,6 +1,6 @@
 # Pure Go web development toolkit
 
-Arcanum is focused on pure Go web development, to create highly interactive fullstack apps, while you enjoy it
+Hirokit is focused on pure Go web development, to create highly interactive full-stack web applications, while you enjoy it
 
 **Please, be patient, docs are in construction, thank you.**
 

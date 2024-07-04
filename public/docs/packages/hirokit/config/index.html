@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Config # App # App: config.App{ Name: &#34;your-app-name&#34;, Plugin: true // If it&#39;s plugin, not an app PublicUrlPath: &#34;/public/&#34;, PublicLocalDir: &#34;./public/&#34;, } Plugin # Plugins like Farah UI, based on Hiro, must be registered, they need set the field to true
+Cache # Cache by default uses memory package, but recommended way is to use Redis (or Redis-compatible database) Redis client Cache: config.Cache{ // Custom memory dir, which persist cache state memory: memory.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/packages/hirokit/config/">
+  <meta property="og:site_name" content="Arcanum">
+  <meta property="og:title" content="Arcanum">
+  <meta property="og:description" content="Config # App # App: config.App{ Name: &#34;your-app-name&#34;, Plugin: true // If it&#39;s plugin, not an app PublicUrlPath: &#34;/public/&#34;, PublicLocalDir: &#34;./public/&#34;, } Plugin # Plugins like Farah UI, based on Hiro, must be registered, they need set the field to true
+Cache # Cache by default uses memory package, but recommended way is to use Redis (or Redis-compatible database) Redis client Cache: config.Cache{ // Custom memory dir, which persist cache state memory: memory.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Config | Arcanum</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="canonical" href="http://localhost:1313/docs/packages/hirokit/config/">
+<link rel="stylesheet" href="/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.c0103383cad8a4ba0afb140306bdad2b0b5a5505dd644481637512ec910be651.js" integrity="sha256-wBAzg8rYpLoK&#43;xQDBr2tKwtaVQXdZESBY3US7JEL5lE=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Arcanum</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/get-started/" class="">Get Started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/cli/" class="">CLI</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/dyna/" class="">Dyna</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/esquel/" class="">Esquel</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/form/" class="">Form</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/gox/" class="">Gox</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ff631bed5f1208374d25d455cc0a932b" class="toggle" checked />
+    <label for="section-ff631bed5f1208374d25d455cc0a932b" class="flex justify-between">
+      <a href="/docs/packages/hirokit/" class="">Hirokit</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/assets/" class="">Assets</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/auth/" class="">Auth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/cache/" class="">Cache</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/component/" class="">Component</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/config/" class="active">Config</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2206b7dadb42552704154ff4e43c8b45" class="toggle"  />
+    <label for="section-2206b7dadb42552704154ff4e43c8b45" class="flex justify-between">
+      <a href="/docs/packages/hirokit/context/" class="">Context</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/context/component/" class="">Component</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/context/factory/" class="">Factory</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/context/flash-message/" class="">Flash Message</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/context/generator/" class="">Generator</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/context/interceptor/" class="">Interceptor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/context/page/" class="">Page</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7d7018d7ce83e431ee16abef760e5ade" class="toggle"  />
+    <label for="section-7d7018d7ce83e431ee16abef760e5ade" class="flex justify-between">
+      <a href="/docs/packages/hirokit/context/request/" class="">Request</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/context/request/is/" class="">Is</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/context/response/" class="">Response</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/context/state/" class="">State</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/cookies/" class="">Cookies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/csrf/" class="">Csrf</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/database/" class="">Database</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/filesystem/" class="">Filesystem</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/firewall/" class="">Firewall</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/handler/" class="">Handler</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/layout/" class="">Layout</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/localization/" class="">Localization</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/mailer/" class="">Mailer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/middleware/" class="">Middleware</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/plugin/" class="">Plugin</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/router/" class="">Router</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hirokit/view/" class="">View</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/tempest/" class="">Tempest</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Config</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#app">App</a>
+      <ul>
+        <li><a href="#plugin">Plugin</a></li>
+      </ul>
+    </li>
+    <li><a href="#cache">Cache</a></li>
+    <li><a href="#database">Database</a></li>
+    <li><a href="#form">Form</a></li>
+    <li><a href="#filesystem">Filesystem</a></li>
+    <li><a href="#localization">Localization</a></li>
+    <li><a href="#parser">Parser</a></li>
+    <li><a href="#router">Router</a></li>
+    <li><a href="#security">Security</a>
+      <ul>
+        <li><a href="#firewall">Firewall</a></li>
+        <li><a href="#roles">Roles</a></li>
+        <li><a href="#groups">Groups</a></li>
+        <li><a href="#csrf">CSRF</a></li>
+      </ul>
+    </li>
+    <li><a href="#smtp">Smtp</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="config">
+  Config
+  <a class="anchor" href="#config">#</a>
+</h1>
+<h2 id="app">
+  App
+  <a class="anchor" href="#app">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">App</span>: <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">App</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Name</span>:           <span style="color:#e6db74">&#34;your-app-name&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Plugin</span>:         <span style="color:#66d9ef">true</span> <span style="color:#75715e">// If it&#39;s plugin, not an app
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">PublicUrlPath</span>:  <span style="color:#e6db74">&#34;/public/&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">PublicLocalDir</span>: <span style="color:#e6db74">&#34;./public/&#34;</span>,
+</span></span><span style="display:flex;"><span>}    
+</span></span></code></pre></div><h3 id="plugin">
+  Plugin
+  <a class="anchor" href="#plugin">#</a>
+</h3>
+<p>Plugins like Farah UI, based on Hiro, must be registered, they need set the field to true</p>
+<h2 id="cache">
+  Cache
+  <a class="anchor" href="#cache">#</a>
+</h2>
+<ul>
+<li>Cache by default uses memory package, but recommended way is to use <strong>Redis</strong> (or Redis-compatible database)</li>
+<li><a href="https://github.com/redis/go-redis" target="_blank">Redis client</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Cache</span>: <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">Cache</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Custom memory dir, which persist cache state
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">memory</span>: <span style="color:#a6e22e">memory</span>.<span style="color:#a6e22e">New</span>(<span style="color:#e6db74">&#34;./custom-backup-dir&#34;</span>),
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">redis</span>:  <span style="color:#a6e22e">redis</span>.<span style="color:#a6e22e">NewClient</span>(
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">redis</span>.<span style="color:#a6e22e">Options</span>{
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Addr</span>:     <span style="color:#e6db74">&#34;starter-redis:6379&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">DB</span>:       <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="database">
+  Database
+  <a class="anchor" href="#database">#</a>
+</h2>
+<ul>
+<li>Supports multi-database system</li>
+<li>Main database is default</li>
+<li>Provided naming convention constant</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Database</span>: <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#f92672">*</span><span style="color:#a6e22e">esquel</span>.<span style="color:#a6e22e">DB</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">hiro</span>.<span style="color:#a6e22e">Main</span>:      <span style="color:#a6e22e">MainDatabase</span>(),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;some-database&#34;</span>:  <span style="color:#a6e22e">SomeAnotherDatabase</span>(),
+</span></span><span style="display:flex;"><span>},
+</span></span></code></pre></div><h2 id="form">
+  Form
+  <a class="anchor" href="#form">#</a>
+</h2>
+<ul>
+<li>Limit incoming form data size in MBs</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Form</span>: <span style="color:#a6e22e">form</span>.<span style="color:#a6e22e">Config</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Limit</span>: <span style="color:#ae81ff">256</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="filesystem">
+  Filesystem
+  <a class="anchor" href="#filesystem">#</a>
+</h2>
+<ul>
+<li>Local</li>
+<li>S3-compatible - <a href="https://github.com/minio/minio-go" target="_blank">Minio client</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// Local
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">Filesystem</span>: <span style="color:#a6e22e">filesystem</span>.<span style="color:#a6e22e">Config</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Driver</span>: <span style="color:#a6e22e">filesystem</span>.<span style="color:#a6e22e">Local</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Dir</span>:    <span style="color:#e6db74">&#34;./files&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Cloud
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">cloudClient</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">minio</span>.<span style="color:#a6e22e">New</span>(
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;your-bucket-endpoint&#34;</span>, 
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">minio</span>.<span style="color:#a6e22e">Options</span>{
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Creds</span>:  <span style="color:#a6e22e">credentials</span>.<span style="color:#a6e22e">NewStaticV4</span>(
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;your-bucket-access-key&#34;</span>, 
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;your-bucket-secret-key&#34;</span>, 
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#75715e">// token, if necessary
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        ),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Secure</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Filesystem</span>: <span style="color:#a6e22e">filesystem</span>.<span style="color:#a6e22e">Config</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Driver</span>: <span style="color:#a6e22e">filesystem</span>.<span style="color:#a6e22e">Cloud</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Cloud</span>: <span style="color:#a6e22e">cloudClient</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;my-bucket-name&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="localization">
+  Localization
+  <a class="anchor" href="#localization">#</a>
+</h2>
+<ul>
+<li>Uses cookies by default</li>
+<li>Can use path prefix</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Localization</span>: <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">Localization</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Enabled</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// If you want have lang code as path prefix
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">Path</span>:    <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Languages</span>: []<span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">Language</span>{
+</span></span><span style="display:flex;"><span>        { <span style="color:#a6e22e">Main</span>: <span style="color:#66d9ef">true</span>, <span style="color:#a6e22e">Code</span>: <span style="color:#e6db74">&#34;cs&#34;</span> },
+</span></span><span style="display:flex;"><span>        { <span style="color:#a6e22e">Code</span>: <span style="color:#e6db74">&#34;en&#34;</span> },
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Translator</span>: <span style="color:#a6e22e">translator</span>.<span style="color:#a6e22e">New</span>(
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">translator</span>.<span style="color:#a6e22e">Config</span>{
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Dir</span>:      <span style="color:#e6db74">&#34;./locales&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">FileType</span>: <span style="color:#a6e22e">translator</span>.<span style="color:#a6e22e">Yaml</span>,
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>    ),
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Form</span>: <span style="color:#a6e22e">form</span>.<span style="color:#a6e22e">Messages</span>{
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Email</span>:     <span style="color:#e6db74">&#34;error.form.field.email&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Required</span>:  <span style="color:#e6db74">&#34;error.form.field.required&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">MinText</span>:   <span style="color:#e6db74">&#34;error.form.field.min-text&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">MaxText</span>:   <span style="color:#e6db74">&#34;error.form.field.max-text&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">MinNumber</span>: <span style="color:#e6db74">&#34;error.form.field.min-number&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">MaxNumber</span>: <span style="color:#e6db74">&#34;error.form.field.max-number&#34;</span>,
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="parser">
+  Parser
+  <a class="anchor" href="#parser">#</a>
+</h2>
+<ul>
+<li>Limit incoming body size (files) in MBs, when you are not using form builder</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Parser</span>: <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">Parser</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Limit</span>: <span style="color:#ae81ff">256</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="router">
+  Router
+  <a class="anchor" href="#router">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Router</span>: <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">Router</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// If you want have in all paths prefix, 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// lang code included, but has more weight
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">Prefix</span>: <span style="color:#e6db74">&#34;custom-prefix&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Automatic panic recover
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// Handled by dynamic handler
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">Recover</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="security">
+  Security
+  <a class="anchor" href="#security">#</a>
+</h2>
+<p>Auth and firewall are two different packages, each manage their own things, but roles must be shared</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">roles</span> <span style="color:#f92672">:=</span> []<span style="color:#a6e22e">auth</span>.<span style="color:#a6e22e">Role</span>{
+</span></span><span style="display:flex;"><span>    {<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;super-admin&#34;</span>, <span style="color:#a6e22e">Super</span>: <span style="color:#66d9ef">true</span>},
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Security</span>: <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">Security</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Auth</span>: <span style="color:#a6e22e">auth</span>.<span style="color:#a6e22e">Config</span>{
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Roles</span>: <span style="color:#a6e22e">roles</span>,
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Csrf</span>: <span style="color:#a6e22e">csrf</span>.<span style="color:#a6e22e">New</span>(),
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Firewall</span>: []<span style="color:#a6e22e">firewall</span>.<span style="color:#a6e22e">Firewall</span>{
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Enabled</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Name</span>: <span style="color:#a6e22e">hiro</span>.<span style="color:#a6e22e">Main</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Roles</span>: <span style="color:#a6e22e">roles</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Groups</span>: []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;super-secret-page&#34;</span>},
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Redirect</span>: <span style="color:#e6db74">&#34;login&#34;</span>, <span style="color:#75715e">// If forbidden, route name redirect
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        },
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="firewall">
+  Firewall
+  <a class="anchor" href="#firewall">#</a>
+</h3>
+<ul>
+<li>Comparing names and securables</li>
+</ul>
+<h3 id="roles">
+  Roles
+  <a class="anchor" href="#roles">#</a>
+</h3>
+<ul>
+<li>One has to be main</li>
+<li>Super has access through all firewalls, despite firewall securables</li>
+</ul>
+<h3 id="groups">
+  Groups
+  <a class="anchor" href="#groups">#</a>
+</h3>
+<ul>
+<li>Universally named paths names prefixes</li>
+</ul>
+<h3 id="csrf">
+  CSRF
+  <a class="anchor" href="#csrf">#</a>
+</h3>
+<ul>
+<li>If <strong>CSRF</strong> has config instance, it&rsquo;s auto-injected, through factory to all forms, when you are not logged in</li>
+</ul>
+<h2 id="smtp">
+  Smtp
+  <a class="anchor" href="#smtp">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Smtp</span>: <span style="color:#a6e22e">mailer</span>.<span style="color:#a6e22e">Config</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Host</span>:     <span style="color:#e6db74">&#34;your-host&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Port</span>:     <span style="color:#ae81ff">25</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">User</span>:     <span style="color:#e6db74">&#34;username&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Password</span>: <span style="color:#e6db74">&#34;password&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">From</span>:     <span style="color:#e6db74">&#34;\&#34;Your Name\&#34; &lt;info@your-email.com&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="book-columns flex flex-wrap">
+
+  <div class="flex-even markdown-inner">
+    <h3 id="previous-step">
+  Previous step
+  <a class="anchor" href="#previous-step">#</a>
+</h3>
+<p><a href="/docs/get-started/">Get started</a></p>
+  </div>
+
+  <div class="flex-even markdown-inner">
+    <h3 id="next-step">
+  Next step
+  <a class="anchor" href="#next-step">#</a>
+</h3>
+<p><a href="/docs/packages/hirokit/router/">Router</a></p>
+  </div>
+
+</div>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#app">App</a>
+      <ul>
+        <li><a href="#plugin">Plugin</a></li>
+      </ul>
+    </li>
+    <li><a href="#cache">Cache</a></li>
+    <li><a href="#database">Database</a></li>
+    <li><a href="#form">Form</a></li>
+    <li><a href="#filesystem">Filesystem</a></li>
+    <li><a href="#localization">Localization</a></li>
+    <li><a href="#parser">Parser</a></li>
+    <li><a href="#router">Router</a></li>
+    <li><a href="#security">Security</a>
+      <ul>
+        <li><a href="#firewall">Firewall</a></li>
+        <li><a href="#roles">Roles</a></li>
+        <li><a href="#groups">Groups</a></li>
+        <li><a href="#csrf">CSRF</a></li>
+      </ul>
+    </li>
+    <li><a href="#smtp">Smtp</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

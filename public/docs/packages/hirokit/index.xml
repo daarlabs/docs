@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arcanum</title>
+    <link>http://localhost:1313/docs/packages/hirokit/</link>
+    <description>Recent content on Arcanum</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/docs/packages/hirokit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/packages/hirokit/assets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/packages/hirokit/assets/</guid>
+      <description> Assets # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/packages/hirokit/auth/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/packages/hirokit/auth/</guid>
+      <description> Auth # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/packages/hirokit/cache/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/packages/hirokit/cache/</guid>
+      <description> Cache # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/packages/hirokit/component/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/packages/hirokit/component/</guid>
+      <description> Component # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/packages/hirokit/config/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/packages/hirokit/config/</guid>
+      <description>Config # App # App: config.App{ Name: &amp;#34;your-app-name&amp;#34;, Plugin: true // If it&amp;#39;s plugin, not an app PublicUrlPath: &amp;#34;/public/&amp;#34;, PublicLocalDir: &amp;#34;./public/&amp;#34;, } Plugin # Plugins like Farah UI, based on Hiro, must be registered, they need set the field to true&#xA;Cache # Cache by default uses memory package, but recommended way is to use Redis (or Redis-compatible database) Redis client Cache: config.Cache{ // Custom memory dir, which persist cache state memory: memory.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/packages/hirokit/cookies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/packages/hirokit/cookies/</guid>
+      <description> Cookies # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/packages/hirokit/csrf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/packages/hirokit/csrf/</guid>
+      <description> CSRF # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/packages/hirokit/database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/packages/hirokit/database/</guid>
+      <description> Database # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/packages/hirokit/filesystem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/packages/hirokit/filesystem/</guid>
+      <description> Filesystem # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/packages/hirokit/firewall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/packages/hirokit/firewall/</guid>
+      <description> Firewall # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/packages/hirokit/handler/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/packages/hirokit/handler/</guid>
+      <description> Handler # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/packages/hirokit/layout/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/packages/hirokit/layout/</guid>
+      <description> Layout # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/packages/hirokit/localization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/packages/hirokit/localization/</guid>
+      <description> Localization # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/packages/hirokit/mailer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/packages/hirokit/mailer/</guid>
+      <description> Mailer # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/packages/hirokit/middleware/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/packages/hirokit/middleware/</guid>
+      <description> Middleware # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/packages/hirokit/plugin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/packages/hirokit/plugin/</guid>
+      <description> Plugin # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/packages/hirokit/router/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/packages/hirokit/router/</guid>
+      <description> Router # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/packages/hirokit/view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/packages/hirokit/view/</guid>
+      <description> View # </description>
+    </item>
+  </channel>
+</rss>

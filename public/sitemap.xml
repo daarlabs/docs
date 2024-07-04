@@ -2,86 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://arcanum.daar.cz/</loc>
+    <loc>https://hirokit.daar.cz/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/get-started/</loc>
+    <loc>https://hirokit.daar.cz/docs/get-started/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/crest/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/cli/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/gox/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/dyna/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/esquel/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/assets/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/form/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/auth/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/gox/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/cache/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/component/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/assets/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/config/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/auth/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/cache/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/component/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/component/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/factory/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/config/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/flash-message/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/context/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/generator/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/context/component/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/interceptor/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/context/factory/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/page/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/context/flash-message/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/request/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/context/generator/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/request/is/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/context/interceptor/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/response/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/context/page/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/context/state/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/context/request/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/cookies/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/context/request/is/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/csrf/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/context/response/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/database/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/context/state/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/filesystem/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/cookies/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/firewall/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/csrf/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/form/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/database/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/handler/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/filesystem/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/layout/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/firewall/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/localization/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/handler/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/mailer/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/layout/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/middleware/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/localization/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/plugin/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/mailer/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/router/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/middleware/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mirage/view/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/plugin/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/mystiq/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/router/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/quirk/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/view/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/packages/tempest/</loc>
+    <loc>https://hirokit.daar.cz/docs/packages/tempest/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/categories/</loc>
+    <loc>https://hirokit.daar.cz/categories/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/docs/</loc>
+    <loc>https://hirokit.daar.cz/docs/</loc>
   </url><url>
-    <loc>https://arcanum.daar.cz/tags/</loc>
+    <loc>https://hirokit.daar.cz/tags/</loc>
   </url>
 </urlset>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hirokit</title>
+    <link>https://hirokit.daar.cz/docs/packages/hiro/context/</link>
+    <description>Recent content on Hirokit</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://hirokit.daar.cz/docs/packages/hiro/context/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/context/component/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/context/component/</guid>
+      <description> Context - Component # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/context/factory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/context/factory/</guid>
+      <description> Context - Factory # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/context/flash-message/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/context/flash-message/</guid>
+      <description> Context - Flash Message # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/context/generator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/context/generator/</guid>
+      <description> Context - Generator # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/context/interceptor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/context/interceptor/</guid>
+      <description> Interceptor # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/context/page/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/context/page/</guid>
+      <description> Context - Page # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/context/response/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/context/response/</guid>
+      <description> Response # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/context/state/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/context/state/</guid>
+      <description> Context - State # </description>
+    </item>
+  </channel>
+</rss>

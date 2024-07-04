@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Arcanum</title>
-    <link>https://arcanum.daar.cz/docs/packages/crest/</link>
+    <link>http://localhost:1313/docs/packages/crest/</link>
     <description>Recent content on Arcanum</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://arcanum.daar.cz/docs/packages/crest/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/docs/packages/crest/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

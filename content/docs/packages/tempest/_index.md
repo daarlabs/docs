@@ -9,7 +9,7 @@
 
 {{< hint info >}}
 **Advice**
-- Init Tempest Config in same file as app config
+- Init Tempest Config in same file as an app config
 {{< /hint >}}
 
 ```go
@@ -57,7 +57,7 @@ func init() {
 Process and prepare all necessary things to provide frontend assets
 
 ## Assets providing
-By default, Mirage has routes for dynamic Tempest content, so you don't need to worry about that
+By default, Hiro has routes for dynamic Tempest content, so you don't need to worry about that
 
 ## Class
 - **tempest.Class()** is factory, which create **gox.Node** class element or string

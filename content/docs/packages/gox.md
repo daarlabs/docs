@@ -6,7 +6,7 @@
 
 {{< hint info >}}
 **Advice**  
-- Use import alias **import . "github.com/daarlabs/arcanum/gox"**
+- Use import alias **import . "github.com/daarlabs/hirokit/gox"**
 - Be careful with naming convention to prevent HTML nodes names collisions
 {{< /hint >}}
 
@@ -15,7 +15,7 @@
 package app
 
 import (
-	. "github.com/daarlabs/arcanum/gox"
+	. "github.com/daarlabs/hirokit/gox"
 )
 
 func Page() string {
