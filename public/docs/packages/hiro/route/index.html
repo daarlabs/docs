@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content=" Route # Functions handle incoming request and outcoming response Route uses handler func ExampleRoute(app hiro.Hiro) { app.Route( &#34;/example&#34;, example_handler.Example(), Method(http.MethodGet, http.MethodPost), Name(&#34;example&#34;), ) } Config # Method # Route is created with all http methods by default You can override defaults and define custom http methods Method(http.MethodGet, http.MethodPost) Name # For routes matching and generating links
+Name(&#34;example&#34;) Layout # Layouts are defined in app main.go file Override main layout Layout(&#34;custom_layout&#34;) ">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://hirokit.daar.cz/docs/packages/hiro/route/">
+  <meta property="og:site_name" content="Hirokit">
+  <meta property="og:title" content="Hirokit">
+  <meta property="og:description" content=" Route # Functions handle incoming request and outcoming response Route uses handler func ExampleRoute(app hiro.Hiro) { app.Route( &#34;/example&#34;, example_handler.Example(), Method(http.MethodGet, http.MethodPost), Name(&#34;example&#34;), ) } Config # Method # Route is created with all http methods by default You can override defaults and define custom http methods Method(http.MethodGet, http.MethodPost) Name # For routes matching and generating links
+Name(&#34;example&#34;) Layout # Layouts are defined in app main.go file Override main layout Layout(&#34;custom_layout&#34;) ">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Route | Hirokit</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="canonical" href="https://hirokit.daar.cz/docs/packages/hiro/route/">
+<link rel="stylesheet" href="/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.a2e05f46a02e97a5312f86442c10325d4c88c63e6a984e61d084a7ad8f6771bb.js" integrity="sha256-ouBfRqAul6UxL4ZELBAyXUyIxj5qmE5h0ISnrY9ncbs=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Hirokit</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/get-started/" class="">Get Started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/cli/" class="">CLI</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/devtool/" class="">Devtool</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/dyna/" class="">Dyna</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/esquel/" class="">Esquel</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/form/" class="">Form</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/gox/" class="">Gox</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-28be4f4937312eec989893f9d3d6614a" class="toggle" checked />
+    <label for="section-28be4f4937312eec989893f9d3d6614a" class="flex justify-between">
+      <a href="/docs/packages/hiro/" class="">Hiro</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/assets/" class="">Assets</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/auth/" class="">Auth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/cache/" class="">Cache</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/component/" class="">Component</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/config/" class="">Config</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b044c9387d2cda910c81548989c9bf53" class="toggle"  />
+    <label for="section-b044c9387d2cda910c81548989c9bf53" class="flex justify-between">
+      <a href="/docs/packages/hiro/context/" class="">Context</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/context/component/" class="">Component</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/context/factory/" class="">Factory</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/context/flash-message/" class="">Flash Message</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/context/generator/" class="">Generator</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/context/interceptor/" class="">Interceptor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/context/page/" class="">Page</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a95da1cd0be2f96892995f17acef0d12" class="toggle"  />
+    <label for="section-a95da1cd0be2f96892995f17acef0d12" class="flex justify-between">
+      <a href="/docs/packages/hiro/context/request/" class="">Request</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/context/request/is/" class="">Is</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/context/response/" class="">Response</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/context/state/" class="">State</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/cookies/" class="">Cookies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/csrf/" class="">Csrf</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/database/" class="">Database</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/filesystem/" class="">Filesystem</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/firewall/" class="">Firewall</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/handler/" class="">Handler</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/layout/" class="">Layout</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/localization/" class="">Localization</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/mailer/" class="">Mailer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/middleware/" class="">Middleware</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/plugin/" class="">Plugin</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/route/" class="active">Route</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/router/" class="">Router</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/hiro/view/" class="">View</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/tempest/" class="">Tempest</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Route</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#config">Config</a>
+      <ul>
+        <li><a href="#method">Method</a></li>
+        <li><a href="#name">Name</a></li>
+        <li><a href="#layout">Layout</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="route">
+  Route
+  <a class="anchor" href="#route">#</a>
+</h1>
+<ul>
+<li>Functions handle incoming request and outcoming response</li>
+<li>Route uses handler</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">ExampleRoute</span>(<span style="color:#a6e22e">app</span> <span style="color:#a6e22e">hiro</span>.<span style="color:#a6e22e">Hiro</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">Route</span>(
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;/example&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">example_handler</span>.<span style="color:#a6e22e">Example</span>(),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Method</span>(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">MethodGet</span>, <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">MethodPost</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Name</span>(<span style="color:#e6db74">&#34;example&#34;</span>),
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="config">
+  Config
+  <a class="anchor" href="#config">#</a>
+</h2>
+<h3 id="method">
+  Method
+  <a class="anchor" href="#method">#</a>
+</h3>
+<ul>
+<li>Route is created with all http methods by default</li>
+<li>You can override defaults and define custom http methods</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Method</span>(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">MethodGet</span>, <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">MethodPost</span>)
+</span></span></code></pre></div><h3 id="name">
+  Name
+  <a class="anchor" href="#name">#</a>
+</h3>
+<p>For routes matching and generating links</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Name</span>(<span style="color:#e6db74">&#34;example&#34;</span>)
+</span></span></code></pre></div><h3 id="layout">
+  Layout
+  <a class="anchor" href="#layout">#</a>
+</h3>
+<ul>
+<li>Layouts are defined in app <strong>main.go</strong> file</li>
+<li>Override <strong>main</strong> layout</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Layout</span>(<span style="color:#e6db74">&#34;custom_layout&#34;</span>)
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#config">Config</a>
+      <ul>
+        <li><a href="#method">Method</a></li>
+        <li><a href="#name">Name</a></li>
+        <li><a href="#layout">Layout</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
