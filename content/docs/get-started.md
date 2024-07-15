@@ -7,10 +7,16 @@ Requirements:
 Optional:
 - [Tilt](https://tilt.dev/)
 
-## Clone starter repository
+## Install CLI
 ```bash
-git clone https://github.com/daarlabs/starter.git
+go install -v github.com/daarlabs/hrx
 ```
+
+## Create a new app
+```bash
+hrx new app_name && cd app_name
+```
+
 
 ## Start the app
 ```bash

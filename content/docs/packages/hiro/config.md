@@ -42,6 +42,15 @@ Database: map[string]*esquel.DB{
 },
 ```
 
+## Dev
+Devtool usage configuration
+```go
+Dev: config.Dev{
+  LiveReload: env.Development(),
+  Tool:       env.Development(),
+}
+```
+
 ## Form
 - Limit incoming form data size in MBs
 ```go
