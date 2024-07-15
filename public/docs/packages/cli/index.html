@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CLI # Requirements # Go 1.22&#43; Get started # go install -v github.com/daarlabs/hrx
-Cmd # Run hrx -h to see all possibilities">
+<meta name="description" content="CLI # Requirements # Go 1.22&#43; Get started # go install -v github.com/daarlabs/hrx Cmd # Run hrx help to see all possibilities Generating or migrating is only possible in project root directory (go.work) Create new app # hrx new app_name # Short form hrx n app_name Run devtool # hrx dev # Short form hrx d Generate # Generate route # Generates route, handler and page with props
+hrx generate route --name route_name --app app_name # Short form hrx g r -n route_name -a app_name Generate handler # hrx generate handler --name handler_name --app app_name # Short form hrx g h -n handler_name -a app_name Generate page # Generates page with props">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://hirokit.daar.cz/docs/packages/cli/">
   <meta property="og:site_name" content="Hirokit">
   <meta property="og:title" content="Hirokit">
-  <meta property="og:description" content="CLI # Requirements # Go 1.22&#43; Get started # go install -v github.com/daarlabs/hrx
-Cmd # Run hrx -h to see all possibilities">
+  <meta property="og:description" content="CLI # Requirements # Go 1.22&#43; Get started # go install -v github.com/daarlabs/hrx Cmd # Run hrx help to see all possibilities Generating or migrating is only possible in project root directory (go.work) Create new app # hrx new app_name # Short form hrx n app_name Run devtool # hrx dev # Short form hrx d Generate # Generate route # Generates route, handler and page with props
+hrx generate route --name route_name --app app_name # Short form hrx g r -n route_name -a app_name Generate handler # hrx generate handler --name handler_name --app app_name # Short form hrx g h -n handler_name -a app_name Generate page # Generates page with props">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 <title>CLI | Hirokit</title>
@@ -20,7 +20,7 @@ Cmd # Run hrx -h to see all possibilities">
 <link rel="canonical" href="https://hirokit.daar.cz/docs/packages/cli/">
 <link rel="stylesheet" href="/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.f50940afd80338a0bd40e20e4083d09f1cdf6013bc76098ed8c2292d3557864d.js" integrity="sha256-9QlAr9gDOKC9QOIOQIPQnxzfYBO8dgmO2MIpLTVXhk0=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.a2e05f46a02e97a5312f86442c10325d4c88c63e6a984e61d084a7ad8f6771bb.js" integrity="sha256-ouBfRqAul6UxL4ZELBAyXUyIxj5qmE5h0ISnrY9ncbs=" crossorigin="anonymous"></script>
 
   
 
@@ -91,6 +91,24 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="/docs/packages/cli/" class="active">CLI</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/devtool/" class="">Devtool</a>
   
 
           
@@ -558,6 +576,19 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="/docs/packages/hiro/route/" class="">Route</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="/docs/packages/hiro/router/" class="">Router</a>
   
 
@@ -655,6 +686,24 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#requirements">Requirements</a></li>
     <li><a href="#get-started">Get started</a></li>
     <li><a href="#cmd">Cmd</a></li>
+    <li><a href="#create-new-app">Create new app</a></li>
+    <li><a href="#run-devtool">Run devtool</a></li>
+    <li><a href="#generate">Generate</a>
+      <ul>
+        <li><a href="#generate-route">Generate route</a></li>
+        <li><a href="#generate-handler">Generate handler</a></li>
+        <li><a href="#generate-page">Generate page</a></li>
+        <li><a href="#generate-form">Generate form</a></li>
+        <li><a href="#generate-migration">Generate migration</a></li>
+      </ul>
+    </li>
+    <li><a href="#migrator">Migrator</a>
+      <ul>
+        <li><a href="#init-migrator">Init migrator</a></li>
+        <li><a href="#migrate-up">Migrate up</a></li>
+        <li><a href="#migrate-down">Migrate down</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -682,13 +731,109 @@ https://github.com/alex-shpak/hugo-book
   Get started
   <a class="anchor" href="#get-started">#</a>
 </h2>
-<p><code>go install -v github.com/daarlabs/hrx</code></p>
-<h2 id="cmd">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>go install -v github.com/daarlabs/hrx
+</span></span></code></pre></div><h2 id="cmd">
   Cmd
   <a class="anchor" href="#cmd">#</a>
 </h2>
-<p>Run <code>hrx -h</code> to see all possibilities</p>
-</article>
+<ul>
+<li>Run <code>hrx help</code> to see all possibilities</li>
+<li>Generating or migrating is only possible in project root directory (<strong>go.work</strong>)</li>
+</ul>
+<h2 id="create-new-app">
+  Create new app
+  <a class="anchor" href="#create-new-app">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hrx new app_name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Short form</span>
+</span></span><span style="display:flex;"><span>hrx n app_name
+</span></span></code></pre></div><h2 id="run-devtool">
+  Run devtool
+  <a class="anchor" href="#run-devtool">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hrx dev
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Short form</span>
+</span></span><span style="display:flex;"><span>hrx d
+</span></span></code></pre></div><h2 id="generate">
+  Generate
+  <a class="anchor" href="#generate">#</a>
+</h2>
+<h3 id="generate-route">
+  Generate route
+  <a class="anchor" href="#generate-route">#</a>
+</h3>
+<p>Generates route, handler and page with props</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hrx generate route --name route_name --app app_name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Short form</span>
+</span></span><span style="display:flex;"><span>hrx g r -n route_name -a app_name
+</span></span></code></pre></div><h3 id="generate-handler">
+  Generate handler
+  <a class="anchor" href="#generate-handler">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hrx generate handler --name handler_name --app app_name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Short form</span>
+</span></span><span style="display:flex;"><span>hrx g h -n handler_name -a app_name
+</span></span></code></pre></div><h3 id="generate-page">
+  Generate page
+  <a class="anchor" href="#generate-page">#</a>
+</h3>
+<p>Generates page with props</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hrx generate page --name page_name --app app_name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Short form</span>
+</span></span><span style="display:flex;"><span>hrx g p -n page_name -a app_name
+</span></span></code></pre></div><h3 id="generate-form">
+  Generate form
+  <a class="anchor" href="#generate-form">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hrx generate form --name form_name --app app_name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Short form</span>
+</span></span><span style="display:flex;"><span>hrx g f -n form_name -a app_name
+</span></span></code></pre></div><h3 id="generate-migration">
+  Generate migration
+  <a class="anchor" href="#generate-migration">#</a>
+</h3>
+<ul>
+<li>Name is not required</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hrx generate migration --name migration_name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Short form</span>
+</span></span><span style="display:flex;"><span>hrx g m -n migration_name
+</span></span></code></pre></div><h2 id="migrator">
+  Migrator
+  <a class="anchor" href="#migrator">#</a>
+</h2>
+<h3 id="init-migrator">
+  Init migrator
+  <a class="anchor" href="#init-migrator">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hrx migrate init
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Short form</span>
+</span></span><span style="display:flex;"><span>hrx m i
+</span></span></code></pre></div><h3 id="migrate-up">
+  Migrate up
+  <a class="anchor" href="#migrate-up">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hrx migrate up
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Short form</span>
+</span></span><span style="display:flex;"><span>hrx m u
+</span></span></code></pre></div><h3 id="migrate-down">
+  Migrate down
+  <a class="anchor" href="#migrate-down">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hrx migrate down
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Short form</span>
+</span></span><span style="display:flex;"><span>hrx m d
+</span></span></code></pre></div></article>
  
       
 
@@ -732,6 +877,24 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#requirements">Requirements</a></li>
     <li><a href="#get-started">Get started</a></li>
     <li><a href="#cmd">Cmd</a></li>
+    <li><a href="#create-new-app">Create new app</a></li>
+    <li><a href="#run-devtool">Run devtool</a></li>
+    <li><a href="#generate">Generate</a>
+      <ul>
+        <li><a href="#generate-route">Generate route</a></li>
+        <li><a href="#generate-handler">Generate handler</a></li>
+        <li><a href="#generate-page">Generate page</a></li>
+        <li><a href="#generate-form">Generate form</a></li>
+        <li><a href="#generate-migration">Generate migration</a></li>
+      </ul>
+    </li>
+    <li><a href="#migrator">Migrator</a>
+      <ul>
+        <li><a href="#init-migrator">Init migrator</a></li>
+        <li><a href="#migrate-up">Migrate up</a></li>
+        <li><a href="#migrate-down">Migrate down</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

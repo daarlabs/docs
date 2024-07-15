@@ -8,6 +8,8 @@
   </url><url>
     <loc>https://hirokit.daar.cz/docs/packages/cli/</loc>
   </url><url>
+    <loc>https://hirokit.daar.cz/docs/packages/devtool/</loc>
+  </url><url>
     <loc>https://hirokit.daar.cz/docs/packages/dyna/</loc>
   </url><url>
     <loc>https://hirokit.daar.cz/docs/packages/esquel/</loc>
@@ -71,6 +73,8 @@
     <loc>https://hirokit.daar.cz/docs/packages/hiro/middleware/</loc>
   </url><url>
     <loc>https://hirokit.daar.cz/docs/packages/hiro/plugin/</loc>
+  </url><url>
+    <loc>https://hirokit.daar.cz/docs/packages/hiro/route/</loc>
   </url><url>
     <loc>https://hirokit.daar.cz/docs/packages/hiro/router/</loc>
   </url><url>

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Get started # Requirements:
 Docker Go 1.22&#43; Optional:
-Tilt Clone starter repository # git clone https://github.com/daarlabs/starter.git Start the app # tilt up # OR docker compose up Your app will be running on localhost
+Tilt Install CLI # go install -v github.com/daarlabs/hrx Create a new app # hrx new app_name &amp;&amp; cd app_name Start the app # tilt up # OR docker compose up Your app will be running on localhost
 Next step # Config">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
@@ -14,7 +14,7 @@ Next step # Config">
   <meta property="og:title" content="Hirokit">
   <meta property="og:description" content="Get started # Requirements:
 Docker Go 1.22&#43; Optional:
-Tilt Clone starter repository # git clone https://github.com/daarlabs/starter.git Start the app # tilt up # OR docker compose up Your app will be running on localhost
+Tilt Install CLI # go install -v github.com/daarlabs/hrx Create a new app # hrx new app_name &amp;&amp; cd app_name Start the app # tilt up # OR docker compose up Your app will be running on localhost
 Next step # Config">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
@@ -25,7 +25,7 @@ Next step # Config">
 <link rel="canonical" href="https://hirokit.daar.cz/docs/get-started/">
 <link rel="stylesheet" href="/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.f50940afd80338a0bd40e20e4083d09f1cdf6013bc76098ed8c2292d3557864d.js" integrity="sha256-9QlAr9gDOKC9QOIOQIPQnxzfYBO8dgmO2MIpLTVXhk0=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.a2e05f46a02e97a5312f86442c10325d4c88c63e6a984e61d084a7ad8f6771bb.js" integrity="sha256-ouBfRqAul6UxL4ZELBAyXUyIxj5qmE5h0ISnrY9ncbs=" crossorigin="anonymous"></script>
 
   
 
@@ -95,6 +95,24 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="/docs/packages/cli/" class="">CLI</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/devtool/" class="">Devtool</a>
   
 
           
@@ -562,6 +580,19 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="/docs/packages/hiro/route/" class="">Route</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="/docs/packages/hiro/router/" class="">Router</a>
   
 
@@ -656,7 +687,8 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#clone-starter-repository">Clone starter repository</a></li>
+    <li><a href="#install-cli">Install CLI</a></li>
+    <li><a href="#create-a-new-app">Create a new app</a></li>
     <li><a href="#start-the-app">Start the app</a></li>
   </ul>
 </nav>
@@ -683,11 +715,16 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="https://tilt.dev/">Tilt</a></li>
 </ul>
-<h2 id="clone-starter-repository">
-  Clone starter repository
-  <a class="anchor" href="#clone-starter-repository">#</a>
+<h2 id="install-cli">
+  Install CLI
+  <a class="anchor" href="#install-cli">#</a>
 </h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/daarlabs/starter.git
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>go install -v github.com/daarlabs/hrx
+</span></span></code></pre></div><h2 id="create-a-new-app">
+  Create a new app
+  <a class="anchor" href="#create-a-new-app">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hrx new app_name <span style="color:#f92672">&amp;&amp;</span> cd app_name
 </span></span></code></pre></div><h2 id="start-the-app">
   Start the app
   <a class="anchor" href="#start-the-app">#</a>
@@ -751,7 +788,8 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#clone-starter-repository">Clone starter repository</a></li>
+    <li><a href="#install-cli">Install CLI</a></li>
+    <li><a href="#create-a-new-app">Create a new app</a></li>
     <li><a href="#start-the-app">Start the app</a></li>
   </ul>
 </nav>

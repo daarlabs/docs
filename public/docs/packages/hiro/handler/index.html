@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Handler # ">
+<meta name="description" content="Handler # Functions handle incoming request and outcoming response
+func ExampleHandler() Handler { return func(c hiro.Ctx) error { return c.Response().Text(&#34;Hello World!&#34;)	} } Advice
+Through handler factory, you can pass deps as args func ExampleHandler(exampleService example_service.ExampleService) Handler { return func(c hiro.Ctx) error { return c.Response().Text(exampleService.GetResult()) } } Next step # Route">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://hirokit.daar.cz/docs/packages/hiro/handler/">
   <meta property="og:site_name" content="Hirokit">
   <meta property="og:title" content="Hirokit">
-  <meta property="og:description" content=" Handler # ">
+  <meta property="og:description" content="Handler # Functions handle incoming request and outcoming response
+func ExampleHandler() Handler { return func(c hiro.Ctx) error { return c.Response().Text(&#34;Hello World!&#34;)	} } Advice
+Through handler factory, you can pass deps as args func ExampleHandler(exampleService example_service.ExampleService) Handler { return func(c hiro.Ctx) error { return c.Response().Text(exampleService.GetResult()) } } Next step # Route">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
@@ -19,7 +23,7 @@
 <link rel="canonical" href="https://hirokit.daar.cz/docs/packages/hiro/handler/">
 <link rel="stylesheet" href="/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.f50940afd80338a0bd40e20e4083d09f1cdf6013bc76098ed8c2292d3557864d.js" integrity="sha256-9QlAr9gDOKC9QOIOQIPQnxzfYBO8dgmO2MIpLTVXhk0=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.a2e05f46a02e97a5312f86442c10325d4c88c63e6a984e61d084a7ad8f6771bb.js" integrity="sha256-ouBfRqAul6UxL4ZELBAyXUyIxj5qmE5h0ISnrY9ncbs=" crossorigin="anonymous"></script>
 
   
 
@@ -89,6 +93,24 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="/docs/packages/cli/" class="">CLI</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/packages/devtool/" class="">Devtool</a>
   
 
           
@@ -556,6 +578,19 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="/docs/packages/hiro/route/" class="">Route</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="/docs/packages/hiro/router/" class="">Router</a>
   
 
@@ -648,7 +683,15 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#next-step">Next step</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
 
@@ -663,6 +706,30 @@ https://github.com/alex-shpak/hugo-book
   Handler
   <a class="anchor" href="#handler">#</a>
 </h1>
+<p>Functions handle incoming request and outcoming response</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">ExampleHandler</span>() <span style="color:#a6e22e">Handler</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">c</span> <span style="color:#a6e22e">hiro</span>.<span style="color:#a6e22e">Ctx</span>) <span style="color:#66d9ef">error</span> {
+</span></span><span style="display:flex;"><span>	    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Response</span>().<span style="color:#a6e22e">Text</span>(<span style="color:#e6db74">&#34;Hello World!&#34;</span>)	
+</span></span><span style="display:flex;"><span>    } 
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><blockquote class="book-hint info">
+  <p><strong>Advice</strong></p>
+<ul>
+<li>Through handler factory, you can pass deps as args</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">ExampleHandler</span>(<span style="color:#a6e22e">exampleService</span> <span style="color:#a6e22e">example_service</span>.<span style="color:#a6e22e">ExampleService</span>) <span style="color:#a6e22e">Handler</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">c</span> <span style="color:#a6e22e">hiro</span>.<span style="color:#a6e22e">Ctx</span>) <span style="color:#66d9ef">error</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Response</span>().<span style="color:#a6e22e">Text</span>(<span style="color:#a6e22e">exampleService</span>.<span style="color:#a6e22e">GetResult</span>())
+</span></span><span style="display:flex;"><span>    } 
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+</blockquote>
+
+<h3 id="next-step">
+  Next step
+  <a class="anchor" href="#next-step">#</a>
+</h3>
+<p><a href="/docs/packages/hiro/route/">Route</a></p>
 </article>
  
       
@@ -702,7 +769,15 @@ https://github.com/alex-shpak/hugo-book
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#next-step">Next step</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
  

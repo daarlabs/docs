@@ -12,7 +12,7 @@
       <link>https://hirokit.daar.cz/docs/get-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hirokit.daar.cz/docs/get-started/</guid>
-      <description>Get started # Requirements:&#xA;Docker Go 1.22+ Optional:&#xA;Tilt Clone starter repository # git clone https://github.com/daarlabs/starter.git Start the app # tilt up # OR docker compose up Your app will be running on localhost&#xA;Next step # Config</description>
+      <description>Get started # Requirements:&#xA;Docker Go 1.22+ Optional:&#xA;Tilt Install CLI # go install -v github.com/daarlabs/hrx Create a new app # hrx new app_name &amp;amp;&amp;amp; cd app_name Start the app # tilt up # OR docker compose up Your app will be running on localhost&#xA;Next step # Config</description>
     </item>
     <item>
       <title></title>
@@ -26,28 +26,28 @@
       <link>https://hirokit.daar.cz/docs/packages/hiro/assets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hirokit.daar.cz/docs/packages/hiro/assets/</guid>
-      <description> Assets # </description>
+      <description> Assets # Static (public) files # For public (static) files, use Hiro Static handler, which use two arguments (url path, dir) app.Static(&amp;#34;/public/&amp;#34;, &amp;#34;./public/&amp;#34;) Styles # Handled by Tempest Built-in # &amp;ldquo;https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css&#34; Scripts # Handled by Tempest Built-in # &amp;ldquo;https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js&#34; &amp;ldquo;https://unpkg.com/htmx.org@1.9.12&#34; </description>
     </item>
     <item>
       <title></title>
       <link>https://hirokit.daar.cz/docs/packages/hiro/auth/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hirokit.daar.cz/docs/packages/hiro/auth/</guid>
-      <description> Auth # </description>
+      <description>Auth # Under construction!</description>
     </item>
     <item>
       <title></title>
       <link>https://hirokit.daar.cz/docs/packages/hiro/cache/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hirokit.daar.cz/docs/packages/hiro/cache/</guid>
-      <description> Cache # </description>
+      <description>Cache # Under construction!</description>
     </item>
     <item>
       <title></title>
       <link>https://hirokit.daar.cz/docs/packages/hiro/component/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hirokit.daar.cz/docs/packages/hiro/component/</guid>
-      <description> Component # </description>
+      <description>Component # Under construction!</description>
     </item>
     <item>
       <title></title>
@@ -124,91 +124,98 @@
       <link>https://hirokit.daar.cz/docs/packages/hiro/cookies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hirokit.daar.cz/docs/packages/hiro/cookies/</guid>
-      <description> Cookies # </description>
+      <description>Cookies # Under construction!</description>
     </item>
     <item>
       <title></title>
       <link>https://hirokit.daar.cz/docs/packages/hiro/csrf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hirokit.daar.cz/docs/packages/hiro/csrf/</guid>
-      <description> CSRF # </description>
+      <description>CSRF # Under construction!</description>
     </item>
     <item>
       <title></title>
       <link>https://hirokit.daar.cz/docs/packages/hiro/database/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hirokit.daar.cz/docs/packages/hiro/database/</guid>
-      <description> Database # </description>
+      <description>Database # Under construction!</description>
     </item>
     <item>
       <title></title>
       <link>https://hirokit.daar.cz/docs/packages/hiro/filesystem/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hirokit.daar.cz/docs/packages/hiro/filesystem/</guid>
-      <description> Filesystem # </description>
+      <description>Filesystem # Under construction!</description>
     </item>
     <item>
       <title></title>
       <link>https://hirokit.daar.cz/docs/packages/hiro/firewall/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hirokit.daar.cz/docs/packages/hiro/firewall/</guid>
-      <description> Firewall # </description>
+      <description>Firewall # Under construction!</description>
     </item>
     <item>
       <title></title>
       <link>https://hirokit.daar.cz/docs/packages/hiro/handler/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hirokit.daar.cz/docs/packages/hiro/handler/</guid>
-      <description> Handler # </description>
+      <description>Handler # Functions handle incoming request and outcoming response&#xA;func ExampleHandler() Handler { return func(c hiro.Ctx) error { return c.Response().Text(&amp;#34;Hello World!&amp;#34;)&#x9;} } Advice&#xA;Through handler factory, you can pass deps as args func ExampleHandler(exampleService example_service.ExampleService) Handler { return func(c hiro.Ctx) error { return c.Response().Text(exampleService.GetResult()) } } Next step # Route</description>
     </item>
     <item>
       <title></title>
       <link>https://hirokit.daar.cz/docs/packages/hiro/layout/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hirokit.daar.cz/docs/packages/hiro/layout/</guid>
-      <description> Layout # </description>
+      <description>Layout # Under construction!</description>
     </item>
     <item>
       <title></title>
       <link>https://hirokit.daar.cz/docs/packages/hiro/localization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hirokit.daar.cz/docs/packages/hiro/localization/</guid>
-      <description> Localization # </description>
+      <description>Localization # Under construction!</description>
     </item>
     <item>
       <title></title>
       <link>https://hirokit.daar.cz/docs/packages/hiro/mailer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hirokit.daar.cz/docs/packages/hiro/mailer/</guid>
-      <description> Mailer # </description>
+      <description>Mailer # Under construction!</description>
     </item>
     <item>
       <title></title>
       <link>https://hirokit.daar.cz/docs/packages/hiro/middleware/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hirokit.daar.cz/docs/packages/hiro/middleware/</guid>
-      <description> Middleware # </description>
+      <description> Middleware # Middlewares are just another handlers, which runs before all defined handlers&#xA;app.Use( func(c hiro.Ctx) error { return c.Continue() }, ) </description>
     </item>
     <item>
       <title></title>
       <link>https://hirokit.daar.cz/docs/packages/hiro/plugin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hirokit.daar.cz/docs/packages/hiro/plugin/</guid>
-      <description> Plugin # </description>
+      <description>Plugin # Under construction!</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://hirokit.daar.cz/docs/packages/hiro/route/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hirokit.daar.cz/docs/packages/hiro/route/</guid>
+      <description> Route # Functions handle incoming request and outcoming response Route uses handler func ExampleRoute(app hiro.Hiro) { app.Route( &amp;#34;/example&amp;#34;, example_handler.Example(), Method(http.MethodGet, http.MethodPost), Name(&amp;#34;example&amp;#34;), ) } Config # Method # Route is created with all http methods by default You can override defaults and define custom http methods Method(http.MethodGet, http.MethodPost) Name # For routes matching and generating links&#xA;Name(&amp;#34;example&amp;#34;) Layout # Layouts are defined in app main.go file Override main layout Layout(&amp;#34;custom_layout&amp;#34;) </description>
     </item>
     <item>
       <title></title>
       <link>https://hirokit.daar.cz/docs/packages/hiro/router/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hirokit.daar.cz/docs/packages/hiro/router/</guid>
-      <description> Router # </description>
+      <description>Router # Under construction!</description>
     </item>
     <item>
       <title></title>
       <link>https://hirokit.daar.cz/docs/packages/hiro/view/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hirokit.daar.cz/docs/packages/hiro/view/</guid>
-      <description> View # </description>
+      <description> View # Used own view library Gox Usage with handler # type Props struct {} func ExamplePage() Node { return Div(Text(&amp;#34;Example page&amp;#34;)) } func ExampleHandler() hiro.Handler { return func(c hiro.Ctx) error { return c.Response().Render(ExamplePage(c, Props{}))&#x9;} } Advice&#xA;Page should have props property func ExaplePage(c hiro.Ctx, props Props) Node { // ... } </description>
     </item>
   </channel>
 </rss>

@@ -12,7 +12,7 @@
       <link>https://hirokit.daar.cz/docs/get-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hirokit.daar.cz/docs/get-started/</guid>
-      <description>Get started # Requirements:&#xA;Docker Go 1.22+ Optional:&#xA;Tilt Clone starter repository # git clone https://github.com/daarlabs/starter.git Start the app # tilt up # OR docker compose up Your app will be running on localhost&#xA;Next step # Config</description>
+      <description>Get started # Requirements:&#xA;Docker Go 1.22+ Optional:&#xA;Tilt Install CLI # go install -v github.com/daarlabs/hrx Create a new app # hrx new app_name &amp;amp;&amp;amp; cd app_name Start the app # tilt up # OR docker compose up Your app will be running on localhost&#xA;Next step # Config</description>
     </item>
     <item>
       <title></title>
